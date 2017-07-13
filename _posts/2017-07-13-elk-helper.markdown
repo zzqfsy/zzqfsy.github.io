@@ -119,8 +119,8 @@ output.logstash:
 ![kibana检索条件](https://zzqfsy.github.io/image/kibana/kibana检索.png)
 
 输出结果
-![kibana检索结果1](https://zzqfsy.github.io/image/kibana/kibana搜索\(1\).png)
-![kibana检索结果2](https://zzqfsy.github.io/image/kibana/kibana搜索\(2\).png)
+![kibana检索结果1](https://zzqfsy.github.io/image/kibana/kibana搜索1.png)
+![kibana检索结果2](https://zzqfsy.github.io/image/kibana/kibana搜索2.png)
 
 ## 8.总结
-经过这两天ELK的初体验之旅，只是处理的定位日志，目前个人能想到还有些许数据分析功能还有待折腾...
+经过这两天ELK的初体验之旅，只是简单的定位日志，目前个人能想到还有些许数据分析功能还有待折腾...
