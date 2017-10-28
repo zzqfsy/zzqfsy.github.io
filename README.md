@@ -9,6 +9,7 @@
 * [Spring cloud项目spring-cloud-demo](https://github.com/zzqfsy/spring-cloud-demo)
 * [分布式任务调度spring-boot-quartz](https://github.com/zzqfsy/spring-boot-quartz)
 * [jwt鉴权框架spring-jwt-starter](https://github.com/zzqfsy/spring-jwt-starter)
+* [Vert.x/guice/mongdb项目](vertx-guice-mongdb-demo)
 * [Vert.x TCP服务端spring-vertx-tcp](https://github.com/zzqfsy/spring-vertx-tcp)
 * [thrift项目spring-boot-thrift-demo](https://github.com/zzqfsy/spring-boot-thrift-demo)
 * [注册发现配置项目spring-curator-starter](https://github.com/zzqfsy/spring-curator-starter)
