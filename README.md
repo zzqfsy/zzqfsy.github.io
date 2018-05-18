@@ -3,6 +3,7 @@
 
 ### 为你准备了以下博文：
 * [ELK5搭建帮助](https://zzqfsy.github.io/2017/07/13/elk5-helper)
+* [JavaBean深复制实现](https://zzqfsy.github.io/2018/05/18/beans-deep-copy-properties)
 
 ### 为你准备了以下项目:
 * [SSM项目生成器generator_springmvc_mybatis](https://github.com/zzqfsy/generator_springmvc_mybatis)
