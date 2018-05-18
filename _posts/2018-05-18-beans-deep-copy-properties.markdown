@@ -5,9 +5,7 @@
 - none
 
 ## 1. 阅读源码，发现原生的是浅复制，需要改造
-```
 ![修改点说明](https://zzqfsy.github.io/image/spring/copyPropertiesByDeep.png)
-```
 
 ## 2. 修改源码
 深复制实现
