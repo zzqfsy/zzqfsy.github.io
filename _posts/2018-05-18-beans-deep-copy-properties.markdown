@@ -1,9 +1,6 @@
 # Beans properties deep copy
 由于Clone接口的约束性，这里基于Spring提供的Beans.copyProperties()进行改造，深入拷贝Bean属性。
 
-相关参考资料
-- none
-
 ## 1. 阅读源码，发现原生的是浅复制，需要改造
 ![修改点说明](https://zzqfsy.github.io/image/spring/copyPropertiesByDeep.png)
 
@@ -175,3 +172,6 @@ public class test {
 
 ## 4.总结
 代码目前也是挺丑的，后续想办法优化
+
+## 相关参考资料
+- none
