@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title></title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="./assets/js/droppy.js"></script>
+	<script type="text/javascript" src="./assets/js/ysth.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    	<div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">弹框家族</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="./产品概括.html">产品概括</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        扭转弹簧系列 <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./扭簧计算.html">扭簧计算</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">更多</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        拉伸弹簧系列 <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./拉簧计算.html">拉簧计算</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">更多</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        压缩弹簧系列 <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./压簧计算.html">压簧计算</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">更多</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+              <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    	</div>
+    </nav>
+  </div>
+  <div class="row-fluid">
+		<div id="sta_content">
+		<blockquote style="margin-right: 0px" dir="ltr">
+			<p><link href="./assets/css/jisuan.css" rel="stylesheet" type="text/css">
+		</p><div class="tool-bor">
+			<div class="tool-bg">
+				<h1>
+					圆柱螺旋压缩弹簧计算器</h1>
+				<div class="tool-box">
+					<div class="tool-icon">
+						&nbsp;</div>
+					<form method="post" name="formt2">
+						<div class="t clear">
+							<div class="tool-div left">
+								<div class="tt">
+									<span>请您填写</span></div>
+								<div class="boxA">
+									<ul class="clear">
+										<li class="i2">
+											压簧材质：</li>
+										<li>
+											<select name="F9" onchange="chthcz(document.formt2);return false;"><option value="1">SUS304 - WPB</option><option value="2">SWPB</option></select></li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											平均螺旋直径(中径) D：</li>
+										<li>
+											<input name="F10" size="8" style="width:96px" type="text" value="6.5"> mm</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											线材直径(线径) d：</li>
+										<li>
+											<input name="F11" size="8" style="width:96px" type="text" value="0.9"> mm</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											压簧总圈数 Na：</li>
+										<li>
+											<input name="F12" size="8" style="width:96px" type="text" value="8"> 圈</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											原始长度 L0：</li>
+										<li>
+											<input name="F13" size="8" style="width:96px" type="text" value="18"> mm</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											压缩后长度(min) L1：</li>
+										<li>
+											<input name="F14" size="8" style="width:96px" type="text" value="15"> mm</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											压缩后长度(max) L2：</li>
+										<li>
+											<input name="F15" size="8" style="width:96px" type="text" value="12"> mm</li>
+									</ul>
+									<div class="txt">
+										注：请认真填写你所需的弹簧的具体参数,便可以计算出该弹簧对应的数值。您还可以对照下面的弹簧示意图。</div>
+									<div class="btnBoxA">
+										<input alt="开始计算" id="do_cal" onclick="lhjs(document.formt2);return false;" src="./images/ksjs.gif" type="image">　　 <input alt="重新计算" onclick="document.formt2.reset();return false;" src="./images/cxjs.gif" type="image"></div>
+									<div style="padding-left:6px;">
+										<img alt="圆柱螺旋压簧示意图" src="./images/压缩弹簧参数计算/ysth.jpg" width="651"></div>
+								</div>
+							</div>
+							<!-- <div class="border01"></div>
+								<div class="border02"></div> -->
+							<div class="tool-div right">
+								<div class="tt">
+									<span>查看结果</span></div>
+								<div class="boxA boxAA">
+									<ul class="clear">
+										<li class="i2">
+											弹簧材质：</li>
+										<li>
+											<input class="as" name="thcz_jg" size="11" value=""></li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											横弹性系数 G：</li>
+										<li>
+											<input class="as" name="hxtxxs" size="11" value=""> kg/mm2</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											最大应力 Smax：</li>
+										<li>
+											<input class="as" name="zdyl" size="11" value=""> Pa</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											弹簧外径 D2：</li>
+										<li>
+											<input class="as" name="thwj" size="11" value=""> mm</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											弹簧内径 D1：</li>
+										<li>
+											<input class="as" name="thnj" size="11" value=""> mm</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											弹簧指数(旋绕比) C：</li>
+										<li>
+											<input class="as" name="thzs" size="11" value=""></li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											节距 t=</li>
+										<li>
+											<input class="as" name="jj" size="11" value=""> mm</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											弹簧最小长度 =</li>
+										<li>
+											<input class="as" name="thzxcd" size="11" value=""> mm</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											弹簧系数 K=</li>
+										<li>
+											<input class="as" name="thxs" size="11" value=""> g/mm</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											作用力量(min) P1=</li>
+										<li>
+											<input class="as" name="zyll1" size="11" value=""> g</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											作用力量(max) P2=</li>
+										<li>
+											<input class="as" name="zyll2" size="11" value=""> g</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											作用力量(min) P1=</li>
+										<li>
+											<input class="as" name="zylln1" size="11" value=""> N</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											作用力量(max) P2=</li>
+										<li>
+											<input class="as" name="zylln2" size="11" value=""> N</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											应力(min) S1=</li>
+										<li>
+											<input class="as" name="yl1" size="11" value=""> Kg/mm2</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											应力(max) S2=</li>
+										<li>
+											<input class="as" name="yl2" size="11" value=""> Kg/mm2</li>
+									</ul>
+									<ul class="clear" style="display:none">
+										<li class="i2">
+											安全率 SF=</li>
+										<li>
+											<input class="as" name="aql" size="11" value=""> %</li>
+									</ul>
+									<ul class="clear">
+										<li class="i2">
+											弹簧重量 M=</li>
+										<li>
+											<input class="as" name="thzl" size="11" value=""> g</li>
+									</ul>
+									<div class="year-map">
+										<p>
+											*以上结果仅供参考</p>
+										<br>
+										<br>
+										&nbsp;</div>
+								</div>
+							</div>
+						</div>
+						<div class="b">
+							&nbsp;</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		</div>
+  </div>
+</div>
+
+
+</body>
+</html>
