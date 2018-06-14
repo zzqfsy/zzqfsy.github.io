@@ -284,7 +284,7 @@ a.btn01:hover {
     background: url("") repeat-y;
     margin: 0 auto;
     position: relative;
-    width: 694px;
+    width: 720px;
 }
 .tool-box .tool-icon {
     background: url("") no-repeat;
@@ -307,7 +307,7 @@ a.btn01:hover {
 }
 .tool-div {
     padding-bottom: 4px;
-    width: 342px;
+    width: 360px;
 }
 .tool-div .tt {
     background: url("") repeat-x scroll 0 50% rgba(0, 0, 0, 0);
@@ -336,7 +336,7 @@ a.btn01:hover {
 }
 .tool-div .boxA li.i2 {
     text-align: right;
-    width: 158px;
+    width: 180px;
 }
 .tool-div .boxA li.i3 {
     text-align: right;
