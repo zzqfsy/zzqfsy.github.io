@@ -5,241 +5,181 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link href="./assets/css/imgHover.css" rel="stylesheet" type="text/css">
   <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
   <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./assets/js/nzth.js"></script>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">温州立昌弹簧制造有限公司</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="./产品概括.html">产品概括</a>
-      </li>
-			<li class="nav-item dropdown">
-				 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-					 弹簧计算
-				 </a>
-				 <div class="dropdown-menu">
-					 <a class="dropdown-item" href="./扭簧计算.html">扭簧计算</a>
-					 <a class="dropdown-item" href="./拉簧计算.html">拉簧计算</a>
-					 <a class="dropdown-item" href="./压簧计算.html">压簧计算</a>
-				 </div>
-			 </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">联系我们</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<br>
-
 <div class="container">
-  <div class="row">
+	<div class="jumbotron">
+	      <h1>温州立昌弹簧制造有限公司</h1>
+	      <p>定制各种类钢丝制品(兼售大量压簧、拉簧、扭簧、异形簧现货以供使用)</p>
+	  </div>
 
-			<div id="sta_content">
-				<blockquote style="margin-right: 0px" dir="ltr">
-					<p><link href="./assets/css/jisuan.css" rel="stylesheet" type="text/css">
-				</p><div class="tool-bor">
-					<div class="tool-bg">
-						<h1>
-							扭簧设计计算软件</h1>
-						<div class="tool-box">
-							<div class="tool-icon">
-								&nbsp;</div>
-							<form method="post" name="formt2">
-								<div class="t clear">
-									<div class="tool-div left">
-										<div class="tt">
-											<span>请您填写</span></div>
-										<div class="boxA">
-											<ul class="clear">
-												<li class="i2">
-													扭簧材质：</li>
-												<li>
-													<select name="F9" onchange="chthcz(document.formt2);return false;"><option value="1">SUS304 - WPB</option><option value="2">SWPB</option></select></li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													平均螺旋直径(中径) D：</li>
-												<li>
-													<input name="F10" size="8" style="width:96px" type="text" value="1.95"> mm</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													线材直径(线径) d：</li>
-												<li>
-													<input name="F11" size="8" style="width:96px" type="text" value="0.5"> mm</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													圈数 Tum：</li>
-												<li>
-													<input name="F12" size="8" style="width:96px" type="text" value="3"> 圈</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													角度 deg：</li>
-												<li>
-													<input name="F13" size="8" style="width:96px" type="text" value="80"> 度</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													固定侧力臂长 X1：</li>
-												<li>
-													<input name="F14" size="8" style="width:96px" type="text" value="2.63"> mm</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													施力侧力臂长 X2：</li>
-												<li>
-													<input name="F15" size="8" style="width:96px" type="text" value="4.9"> mm</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													转动角度 A1：</li>
-												<li>
-													<input name="F16" size="8" style="width:96px" type="text" value="25"> 度</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													转动角度 A2：</li>
-												<li>
-													<input name="F17" size="8" style="width:96px" type="text" value="42"> 度</li>
-											</ul>
-											<div class="txt">
-												注：请认真填写你所需的弹簧的具体参数,便可以计算出该弹簧对应的数值。您还可以对照下面的弹簧示意图。</div>
-											<div class="btnBoxA">
-												<input alt="开始计算" id="do_cal" onclick="lhjs(document.formt2);return false;" src="./images/ksjs.gif" type="image">　　 <input alt="重新计算" onclick="document.formt2.reset();return false;" src="./images/cxjs.gif" type="image"></div>
-											<div style="padding-left:6px;">
-												<img alt="圆柱螺旋扭簧示意图" src="./images/扭转弹簧参数计算/nzth.jpg" width="650"></div>
-										</div>
-									</div>
-									<!-- <div class="border01"></div>
-										<div class="border02"></div> -->
-									<div class="tool-div right">
-										<div class="tt">
-											<span>查看结果</span></div>
-										<div class="boxA boxAA">
-											<ul class="clear">
-												<li class="i2">
-													弹簧材质：</li>
-												<li>
-													<input class="as" name="thcz_jg" size="11" value=""></li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													纵弹性系数 G：</li>
-												<li>
-													<input class="as" name="hxtxxs" size="11" value=""> Kg/mm2</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													最大应力 Smax：</li>
-												<li>
-													<input class="as" name="zdyl" size="11" value=""> Pa</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													RA：</li>
-												<li>
-													<input class="as" name="RA" size="11" value=""></li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													Na：</li>
-												<li>
-													<input class="as" name="Na" size="11" value=""></li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													弹簧系数 K=</li>
-												<li>
-													<input class="as" name="thxs" size="11" value=""> g.mm/deg</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													旋转后总长度 L=</li>
-												<li>
-													<input class="as" name="xzhzcd" size="11" value=""> mm</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													旋转后内径 Ds=</li>
-												<li>
-													<input class="as" name="xzhnj" size="11" value=""> mm</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													作用力量 P1=</li>
-												<li>
-													<input class="as" name="zyll1" size="11" value=""> g</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													作用力量 P2=</li>
-												<li>
-													<input class="as" name="zyll2" size="11" value=""> g</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													力矩 M1=</li>
-												<li>
-													<input class="as" name="lj1" size="11" value=""> g.mm</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													力矩 M2=</li>
-												<li>
-													<input class="as" name="lj2" size="11" value=""> g.mm</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													应力 S1=</li>
-												<li>
-													<input class="as" name="yl1" size="11" value=""> Kg/mm2</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													应力 S2=</li>
-												<li>
-													<input class="as" name="yl2" size="11" value=""> Kg/mm2</li>
-											</ul>
-											<ul class="clear" style="display:none">
-												<li class="i2">
-													安全率 SF=</li>
-												<li>
-													<input class="as" name="aql" size="11" value=""> %</li>
-											</ul>
-											<ul class="clear">
-												<li class="i2">
-													弹簧重量 M=</li>
-												<li>
-													<input class="as" name="thzl" size="11" value=""> g</li>
-											</ul>
-											<div class="year-map">
-												<p>
-													*以上结果仅供参考</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="b">
-									&nbsp;</div>
-							</form>
-						</div>
-					</div>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+	  <a class="navbar-brand" href="#"><img src="./images/logo.jpg" width="30" height="30" alt=""></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	    <ul class="navbar-nav">
+	      <li class="nav-item">
+	        <a class="nav-link" href="./产品概括.html">产品概括</a>
+	      </li>
+				<li class="nav-item dropdown">
+					 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+						 弹簧计算
+					 </a>
+					 <div class="dropdown-menu">
+						 <a class="dropdown-item" href="./扭簧计算.html">扭簧计算</a>
+						 <a class="dropdown-item" href="./拉簧计算.html">拉簧计算</a>
+						 <a class="dropdown-item" href="./压簧计算.html">压簧计算</a>
+					 </div>
+				 </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">联系我们</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	<br>
+
+	<div class="row">
+		<div class="col-12">
+			<h2>扭簧计算</h2>
+		</div>
+	</div>
+	<br />
+
+	<form method="post" name="formt2">
+		<div class="row">
+		<div class="col-lg-6">
+			<!-- input  -->
+			<p class="text-info">输入钮簧系数:</p>
+				<div class="form-group form-inline">
+					<label for="caizhi">扭簧材质：</label>
+					<select class="form-control" name="F9" onchange="chthcz(document.formt2);return false;"><option value="1">SUS304 - WPB</option><option value="2">SWPB</option></select>
 				</div>
-				<br>
-				<p></p></blockquote>
+				<div class="form-group form-inline">
+					<label for="zhijing">平均螺旋直径(中径) D：</label>
+					<input class="form-control" name="F10" size="8" style="width:96px" type="text" value="1.95"> mm
+				</div>
+				<div class="form-group form-inline">
+					<label for="xiancaizhijing">线材直径(线径) d：</label>
+					<input class="form-control" name="F11" size="8" style="width:96px" type="text" value="0.5"> mm
+				</div>
+				<div class="form-group form-inline">
+					<label for="quanshu">圈数 Tum：</label>
+					<input class="form-control" name="F12" size="8" style="width:96px" type="text" value="3"> 圈
+				</div>
+				<div class="form-group form-inline">
+					<label for="jiaodu">角度 deg：</label>
+					<input class="form-control" name="F13" size="8" style="width:96px" type="text" value="80"> 度
+				</div>
+				<div class="form-group form-inline">
+					<label for="bichangX1">固定侧力臂长 X1：</label>
+					<input class="form-control" name="F14" size="8" style="width:96px" type="text" value="2.63"> mm
+				</div>
+				<div class="form-group form-inline">
+					<label for="bichangX2">施力侧力臂长 X2：</label>
+					<input class="form-control" name="F15" size="8" style="width:96px" type="text" value="4.9"> mm
+				</div>
+				<div class="form-group form-inline">
+					<label for="zhuandongjiaoduA1">转动角度 A1：</label>
+					<input class="form-control" name="F16" size="8" style="width:96px" type="text" value="25"> 度
+				</div>
+				<div class="form-group form-inline">
+					<label for="zhuandongjiaoduA2">转动角度 A2：</label>
+					<input class="form-control" name="F17" size="8" style="width:96px" type="text" value="42"> 度
+				</div>
+				<p class="text-warning">
+					注：请认真填写你所需的弹簧的具体参数,便可以计算出该弹簧对应的数值。您还可以对照下面的弹簧示意图。
+				</p>
+				<div class="btnBoxA">
+					<button type="button" class="btn btn-primary" onclick="lhjs(document.formt2);return false;">开始计算</button>
+					<button type="button" class="btn btn-secondary" onclick="document.formt2.reset();return false;">重新计算</button>
+				</div>
+
+				<img alt="圆柱螺旋扭簧示意图" src="./images/扭转弹簧参数计算/nzth.jpg" class="img-fluid" />
+				<br />
 			</div>
 
-  </div>
+			<div class="col-lg-6">
+				<!-- output -->
+				<p class="text-warning">
+					*以上结果仅供参考
+				</p>
+				<p class="text-info">查看结果:</p>
+				<div class="form-group form-inline">
+					<label for="out_caizhi">弹簧材质：</label>
+					<input class="form-control" name="thcz_jg" size="11" value="" />
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_tanghuangxishuG">纵弹性系数 G：</label>
+					<input class="form-control" name="hxtxxs" size="11" value=""> Kg/mm2
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_zuidayingli">最大应力 Smax：</label>
+					<input class="form-control" name="zdyl" size="11" value=""> Pa
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_ra">RA：</label>
+					<input class="form-control" name="RA" size="11" value="">
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_na">Na：</label>
+					<input class="form-control" name="Na" size="11" value="">
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_tanghuangxishuK">弹簧系数 K=</label>
+					<input class="form-control" name="thxs" size="11" value=""> g.mm/deg
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_xuanzhuanchangdu">旋转后总长度 L=</label>
+					<input class="form-control" name="xzhzcd" size="11" value=""> mm
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_xuanzhuanneijing">旋转后内径 Ds=</label>
+					<input class="form-control" name="xzhnj" size="11" value=""> mm
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_zuoyongliliangP1">作用力量 P1=</label>
+					<input class="form-control" name="zyll1" size="11" value=""> g
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_zuoyongliliangP2">作用力量 P2=</label>
+					<input class="form-control" name="zyll2" size="11" value=""> g
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_lijuM1">力矩 M1=</label>
+					<input class="form-control" name="lj1" size="11" value=""> g.mm
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_lijuM2">力矩 M2=</label>
+					<input class="form-control" name="lj2" size="11" value=""> g.mm
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_yingliS1">应力 S1=</label>
+					<input class="form-control" name="yl1" size="11" value=""> Kg/mm2
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_yingliS2">应力 S2=</label>
+					<input class="form-control" name="yl2" size="11" value=""> Kg/mm2
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_anquanlvSF">安全率 SF=</label>
+					<input class="form-control" name="aql" size="11" value=""> %
+				</div>
+				<div class="form-group form-inline">
+					<label for="out_tanghuangzhongliang">弹簧重量 M=</label>
+					<input class="as" name="thzl" size="11" value=""> g
+				</div>
+			</div>
+		</div>
+	</form>
 </div>
 
 
