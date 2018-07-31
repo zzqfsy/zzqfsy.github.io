@@ -5,10 +5,12 @@
 * [ELK5搭建帮助](https://zzqfsy.github.io/2017/07/13/elk5-helper)
 * [JavaBean深复制实现](https://zzqfsy.github.io/2018/05/18/beans-deep-copy-properties)
 * [RobotFramework向导](https://zzqfsy.gitbook.io/robot-framework-tutorial)
+* [Hystrix向导](https://zzqfsy.gitbook.io/hystrix-tutorial)
 
 ### 为你准备了以下项目:
 * [SSM项目生成器generator_springmvc_mybatis](https://github.com/zzqfsy/generator_springmvc_mybatis)
 * [Spring cloud项目spring-cloud-demo](https://github.com/zzqfsy/spring-cloud-demo)
+* [Spring Hystrix Dubbo项目spring-hystrix-rpc](https://github.com/zzqfsy/spring-hystrix-rpc)
 * [分布式任务调度spring-boot-quartz](https://github.com/zzqfsy/spring-boot-quartz)
 * [jwt鉴权框架spring-jwt-starter](https://github.com/zzqfsy/spring-jwt-starter)
 * [Vert.x/guice/mongdb项目vertx-guice-mongdb-demo](https://github.com/zzqfsy/vertx-guice-mongdb-demo)
