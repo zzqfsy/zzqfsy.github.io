@@ -1,11 +1,14 @@
 ## 欢迎来到zzqfsy的世界
-每个人的相遇即是一场缘分，浅到擦肩回眸，深到秉烛夜谈，而载体交流决定对彼此的感觉，即是如此，开始交流吧！
+每个人的相遇即是一场缘分，浅到擦肩回眸，深到秉烛夜谈，而载体——交流决定对彼此的感觉。
+
+让我们开始交流吧！
 
 ### 为你准备了以下博文：
 * [ELK5搭建帮助](https://zzqfsy.github.io/2017/07/13/elk5-helper)
 * [JavaBean深复制实现](https://zzqfsy.github.io/2018/05/18/beans-deep-copy-properties)
 * [RobotFramework向导](https://zzqfsy.gitbook.io/robot-framework-tutorial)
 * [Hystrix向导](https://zzqfsy.gitbook.io/hystrix-tutorial)
+* [Mockito结合Spring App单元测试 - 示例篇](https://zzqfsy.github.io/2019/01/06/mockito-in-spring-example)
 
 ### 为你准备了以下项目:
 * [SSM项目生成器generator_springmvc_mybatis](https://github.com/zzqfsy/generator_springmvc_mybatis)
