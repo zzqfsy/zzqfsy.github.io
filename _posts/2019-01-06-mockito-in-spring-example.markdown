@@ -23,8 +23,9 @@
 ### 1.1 通过内存数据库h2解决mysql依赖问题；
 依托Spring boot引入的内嵌web容器、内嵌h2数据库，兼容sql、jdbc的方案，便捷的一把拉起运行测试。
 
-相关的文件请看
+示例代码片段:
 * [application.yml](https://github.com/zzqfsy/spring-distributed-transaction/blob/master/account-service/src/test/resources/application.yml)
+
 ```yaml
 spring:
   datasource:
@@ -32,7 +33,9 @@ spring:
     url: jdbc:h2:mem:test;MODE=MySQL
     schema: 
 ```
+
 * [BaseTest.java](https://github.com/zzqfsy/spring-distributed-transaction/blob/master/account-service/src/test/java/com/zzqfsy/account/test/base/BaseTest.java)
+
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
 //@RunWith(MockitoJUnitRunner.class)
@@ -44,6 +47,7 @@ public abstract class BaseTest {
 
 }
 ```
+
 ### 1.2 通过Mock对象解决redis依赖问题；
 redisson是redis的一个客户端实现，通过Mock对象RedissonClient注入容器来解决依赖问题，这样做的原因有：
 1. 在示例代码中的主要作用是分布式锁，这对业务代码单元测试的重要性不高；
@@ -51,8 +55,9 @@ redisson是redis的一个客户端实现，通过Mock对象RedissonClient注入�
 3. 专门为单测依赖开个防腐层感觉很鸡肋；
 
 
-相关的文件请看
+示例代码片段
 * [BaseMockConfigTest](https://github.com/zzqfsy/spring-distributed-transaction/blob/master/account-service/src/test/java/com/zzqfsy/account/test/base/BaseMockConfigTest.java)
+
 ```java
 @Configuration
 public class BaseMockConfigTest {
@@ -65,8 +70,9 @@ public class BaseMockConfigTest {
 }
 ```
 
-执行代码示例
+示例代码片段
 * [TAccountDAOTest](https://github.com/zzqfsy/spring-distributed-transaction/blob/master/account-service/src/test/java/com/zzqfsy/account/test/account/dao/TAccountDAOTest.java)
+
 ```java
 public class TAccountDAOTest extends BaseTest {
 
@@ -93,8 +99,9 @@ public class TAccountDAOTest extends BaseTest {
 > <br /> 
 > Spy对象，是个间谍，大多数行为都是真实行为，只有遇到预设的指令时（间谍收到命令），才会开始黑暗的一面...
 
-执行代码示例
+示例代码片段
 * [TAccountRepositoryTest](https://github.com/zzqfsy/spring-distributed-transaction/blob/master/account-service/src/test/java/com/zzqfsy/account/test/account/repository/TAccountRepositoryTest.java)
+
 ```java
 public class TAccountRepositoryTest extends BaseTest {
 
