@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-29T06:57:03.443Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="XjZwnTp-t9CZ-GE_BjPY" version="14.7.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-29T06:57:24.532Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="sf43Zhi9RkNt_5MFm1md" version="14.7.4" type="github">
   <diagram id="_s_JUsNIEyBzn0HLBCIW" name="Page-1">
     <mxGraphModel dx="1186" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -55,8 +55,8 @@
         <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-19" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="460" y="200" width="120" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-20" value="入库" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="474" y="220" width="40" height="20" as="geometry" />
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-20" value="入库作业" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="474" y="220" width="56" height="20" as="geometry" />
         </mxCell>
         <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-21" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="595" y="200" width="115" height="280" as="geometry" />
@@ -64,11 +64,11 @@
         <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-22" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="730" y="200" width="120" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-23" value="库内" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="600" y="220" width="40" height="20" as="geometry" />
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-23" value="库内作业" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="220" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-24" value="出库" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="740" y="220" width="40" height="20" as="geometry" />
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-24" value="出库作业" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="740" y="220" width="50" height="20" as="geometry" />
         </mxCell>
         <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-25" value="&lt;span&gt;康*入库单&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="474" y="250" width="85" height="50" as="geometry" />
