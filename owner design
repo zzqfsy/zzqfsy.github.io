@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-29T04:03:20.741Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="l7blZml-rofeyDZxFBak" version="14.7.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-29T05:58:11.787Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="8LJfc4tJupx3181fHAbu" version="14.7.4" type="github">
   <diagram id="_s_JUsNIEyBzn0HLBCIW" name="Page-1">
     <mxGraphModel dx="1186" dy="549" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -121,16 +121,16 @@
         <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-48" value="博*货主工作台" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="920" y="390" width="90" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-49" value="美*入库" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-49" value="博*入库" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="920" y="440" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-50" value="美*出库" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-50" value="博*出库" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1070" y="440" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-51" value="美*库存" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-51" value="博*库存" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="920" y="520" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-52" value="美*下载" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-52" value="博*下载" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1070" y="520" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
