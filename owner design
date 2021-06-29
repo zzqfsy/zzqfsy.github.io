@@ -1,1 +1,58 @@
-<mxfile host="app.diagrams.net" modified="2021-06-29T03:34:18.218Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" version="14.7.4" etag="wCANWjS0X_17G-EdYLB6" type="github"><diagram id="_s_JUsNIEyBzn0HLBCIW">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-06-29T03:55:21.125Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="xN8NBLPZmmFfeN1tsi7B" version="14.7.4" type="github">
+  <diagram id="_s_JUsNIEyBzn0HLBCIW" name="Page-1">
+    <mxGraphModel dx="1186" dy="549" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-7" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="360" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-6" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="200" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-5" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-1" value="康*库存" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-2" value="美*库存" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-4" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;博*&lt;/span&gt;库存" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-8" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(248, 249, 250); display: inline; float: none;&quot;&gt;康*WMS&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="70" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-9" value="美*WMS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="220" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-10" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;博*WMS&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="75" y="370" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-13" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="560" as="sourcePoint" />
+            <mxPoint x="350" y="10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-14" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="50" width="450" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-15" value="多货主WMS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="414" y="80" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-16" value="&lt;span&gt;康*库存&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-17" value="&lt;span&gt;美*库存&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="535" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hnKcJ-9B-B2Rrmn2ekT4-18" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;博*&lt;/span&gt;&lt;span&gt;库存&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
