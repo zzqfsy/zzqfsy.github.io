@@ -4,6 +4,7 @@
 让我们开始交流吧！
 
 ### 为你准备了以下博文：
+* [Solf业务身份框架]https://github.com/zzqfsy/solf/wiki
 * [ELK5搭建帮助](https://zzqfsy.github.io/2017/07/13/elk5-helper)
 * [JavaBean深复制实现](https://zzqfsy.github.io/2018/05/18/beans-deep-copy-properties)
 * [RobotFramework向导](https://zzqfsy.gitbook.io/robot-framework-tutorial)
