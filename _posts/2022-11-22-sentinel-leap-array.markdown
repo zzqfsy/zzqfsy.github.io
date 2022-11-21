@@ -1,11 +1,11 @@
 # Sentinel滑动窗口实现原理解析
-# 核心思想
+## 核心思想
 https://sentinelguard.io/zh-cn/docs/basic-implementation.html
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0786db3643be453fb1c53994b121a75c~tplv-k3u1fbpfcp-watermark.image?)
 
-# 运行一下
-## 运行程序
+## 运行一下
+### 运行程序
 ```
 public class BucketLeapArrayTestDemo {
 
@@ -42,7 +42,7 @@ public class BucketLeapArrayTestDemo {
 }
 ```
 
-## 运行结果
+### 运行结果
 ```
 window print:[null, WindowWrap{windowLengthInMs=1000, windowStart=1669050281000, value=pass: 1, block: 0}]
 window print:[null, WindowWrap{windowLengthInMs=1000, windowStart=1669050281000, value=pass: 2, block: 0}]
@@ -72,7 +72,7 @@ window print:[WindowWrap{windowLengthInMs=1000, windowStart=1669050282000, value
 ```
 
 
-# 滑动窗口初始化
+## 滑动窗口初始化
 ``` java
 public abstract class LeapArrayInit<T> {
 
@@ -122,7 +122,7 @@ public abstract class LeapArrayInit<T> {
 }
 ```
 
-# 滑动窗口环窗口实现
+## 滑动窗口环窗口实现
 ```
 public abstract class LeapArrayCore<T> extends LeapArrayInit<T> {
 
@@ -243,7 +243,7 @@ public abstract class LeapArrayCore<T> extends LeapArrayInit<T> {
 }
 ```
 
-# 滑动窗口通用功能
+## 滑动窗口通用功能
 ```
 public abstract class LeapArray<T> extends LeapArrayCore<T>{
 
@@ -353,7 +353,7 @@ public abstract class LeapArray<T> extends LeapArrayCore<T>{
 }
 ```
 
-# 简单滑动窗口实现
+## 简单滑动窗口实现
 ```
 public class BucketLeapArray extends LeapArray<MetricBucket> {
 
@@ -378,8 +378,8 @@ public class BucketLeapArray extends LeapArray<MetricBucket> {
 ```
 
 
-# 核心模型
-## 窗口桶包装
+## 核心模型
+### 窗口桶包装
 ```
 public class WindowWrap<T> {
 
@@ -458,7 +458,7 @@ public class WindowWrap<T> {
 ```
 
 
-## 窗口桶计量，T
+### 窗口桶计量，T
 ```
 public class MetricBucket {
 
@@ -524,7 +524,7 @@ public class MetricBucket {
 }
 ```
 
-## 窗口桶计量事件类型
+### 窗口桶计量事件类型
 ```
 public enum MetricEventType {
     /**
