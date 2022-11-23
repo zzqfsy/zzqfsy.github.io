@@ -6,6 +6,7 @@
 ### 为你准备了以下博文：
 * [Sentinel滑动窗口解析](https://zzqfsy.github.io/2019/01/06/sentinel-leap)
 * [Solf业务身份框架](https://github.com/zzqfsy/solf/wiki)
+* [JUC.Condition实现阻塞队列](https://juejin.cn/post/7169090480154787853)
 * [ELK5搭建帮助](https://zzqfsy.github.io/2017/07/13/elk5-helper)
 * [JavaBean深复制实现](https://zzqfsy.github.io/2018/05/18/beans-deep-copy-properties)
 * [RobotFramework向导](https://zzqfsy.gitbook.io/robot-framework-tutorial)
