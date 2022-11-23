@@ -6,6 +6,7 @@
 ### 为你准备了以下博文：
 * [Sentinel滑动窗口解析](https://zzqfsy.github.io/2019/01/06/sentinel-leap)
 * [Solf业务身份框架](https://github.com/zzqfsy/solf/wiki)
+* [Java Pipeline自定义实现](https://juejin.cn/post/7169233019939618846/)
 * [JUC.Condition实现阻塞队列](https://juejin.cn/post/7169090480154787853)
 * [简易红黑树实现](https://juejin.cn/post/7168370112292978725)
 * [ELK5搭建帮助](https://zzqfsy.github.io/2017/07/13/elk5-helper)
