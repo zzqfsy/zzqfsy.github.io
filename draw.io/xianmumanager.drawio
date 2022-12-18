@@ -1,1 +1,67 @@
-<mxfile host="app.diagrams.net" modified="2022-12-18T13:32:57.084Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" version="20.6.2" etag="-5iUzgISZjoiDWk2w0Y-" type="github"><diagram id="bTpKHP__50uLla6OVZz_">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-12-18T14:46:27.984Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" version="20.6.2" etag="A1DrkgOk7Ax9ctaGkr5F" type="github">
+  <diagram id="CFVDw4RR7-W70qYCGya9" name="第 1 页">
+    <mxGraphModel dx="1845" dy="1775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lF4WnOVwI8iE331y6LMs-31" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="-150" width="410" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-1" value="mapper" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="lF4WnOVwI8iE331y6LMs-2" target="lF4WnOVwI8iE331y6LMs-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-2" value="dao" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-4" value="es" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-5" value="redis" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-6" value="Dubbo Provider" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="-230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-7" value="Service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="294" y="-40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-8" value="MQ Listener" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="-230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-9" value="Mq Sender" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-10" value="DingTalk Flow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-11" value="Task" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="-230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-12" value="Dubbo Invoker" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-13" value="Controller" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="-230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-25" value="仓储/库存" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="-110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-26" value="采购/供应商" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="-30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-27" value="费用" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="-110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-28" value="计划/调拨" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="-30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lF4WnOVwI8iE331y6LMs-29" value="物流/仓网" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
