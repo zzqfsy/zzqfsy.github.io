@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-27T05:51:03.495Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.5" etag="GVOs0DnChRtgRyo51Mxn" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-27T05:51:15.447Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.5" etag="6yHw-GpXl_Lu_S9HbcPm" type="github">
   <diagram id="zY4P034wEPN2kZs8GRx3" name="第 1 页">
     <mxGraphModel dx="1026" dy="1780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -158,7 +158,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="yz1jvYl0OhVdzaFBh-Qn-81" value="客户收货配置(contract)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="300" y="110" width="140" height="150" as="geometry" />
+          <mxGeometry x="300" y="110" width="140" height="180" as="geometry" />
         </mxCell>
         <mxCell id="yz1jvYl0OhVdzaFBh-Qn-93" value="客户" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="yz1jvYl0OhVdzaFBh-Qn-81">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
@@ -169,8 +169,11 @@
         <mxCell id="yz1jvYl0OhVdzaFBh-Qn-92" value="城配仓" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="yz1jvYl0OhVdzaFBh-Qn-81">
           <mxGeometry y="90" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yz1jvYl0OhVdzaFBh-Qn-83" value="配送周期" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="yz1jvYl0OhVdzaFBh-Qn-81">
+        <mxCell id="yz1jvYl0OhVdzaFBh-Qn-106" value="配送周期" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="yz1jvYl0OhVdzaFBh-Qn-81">
           <mxGeometry y="120" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yz1jvYl0OhVdzaFBh-Qn-83" value="是否跳过停运" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="yz1jvYl0OhVdzaFBh-Qn-81">
+          <mxGeometry y="150" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yz1jvYl0OhVdzaFBh-Qn-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="yz1jvYl0OhVdzaFBh-Qn-80" target="yz1jvYl0OhVdzaFBh-Qn-81">
           <mxGeometry relative="1" as="geometry" />
