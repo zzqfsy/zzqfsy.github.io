@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-28T08:14:11.439Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="IgOTx5J_-u3GFAcs9NHu" version="20.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-28T08:16:32.607Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="WBYhtSoOTlgNMgPGkKP9" version="20.8.5" type="github">
   <diagram id="zY4P034wEPN2kZs8GRx3" name="第 1 页">
     <mxGraphModel dx="1688" dy="2029" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -231,7 +231,7 @@
         <mxCell id="yz1jvYl0OhVdzaFBh-Qn-100" value="停运结束时间" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="yz1jvYl0OhVdzaFBh-Qn-97" vertex="1">
           <mxGeometry y="90" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="6EQLZ6WRA1m3v4naWMEJ-3" value="运营可售库存" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="6EQLZ6WRA1m3v4naWMEJ-3" value="运营区域可售商品" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="360" y="760" width="150" height="180" as="geometry" />
         </mxCell>
         <mxCell id="6EQLZ6WRA1m3v4naWMEJ-4" value="运营区域" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FF3333;" vertex="1" parent="6EQLZ6WRA1m3v4naWMEJ-3">
@@ -288,7 +288,7 @@
           <mxGeometry x="344" y="720" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="6EQLZ6WRA1m3v4naWMEJ-30" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillStyle=auto;fillColor=none;gradientColor=default;" vertex="1" parent="1">
-          <mxGeometry x="230" y="650" width="745" height="560" as="geometry" />
+          <mxGeometry x="240" y="660" width="745" height="560" as="geometry" />
         </mxCell>
         <mxCell id="6EQLZ6WRA1m3v4naWMEJ-31" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillStyle=auto;fillColor=none;gradientColor=default;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;" vertex="1" parent="1">
           <mxGeometry x="414" y="310" width="560" height="300" as="geometry" />
