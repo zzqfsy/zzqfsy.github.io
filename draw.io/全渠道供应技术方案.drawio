@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-02T07:46:35.507Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.5" etag="yy5BGQriduuaiixOLoN6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-02T08:31:22.078Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.5" etag="JA5Eg-ViHZuqcz4dtCRc" type="github">
   <diagram id="9BSfSEBx7n1tUxAudPgJ" name="第 1 页">
     <mxGraphModel dx="3640" dy="1427" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -294,7 +294,7 @@
         <mxCell id="_SclktuzGxWFYy_Q4PIl-140" value="鲜沐货品" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="1469" y="1350" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_SclktuzGxWFYy_Q4PIl-146" value="城配围栏库存成本" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+        <mxCell id="_SclktuzGxWFYy_Q4PIl-146" value="城配履约库存成本" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="-140" y="630" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_SclktuzGxWFYy_Q4PIl-154" value="批次库存成本" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
@@ -303,7 +303,7 @@
         <mxCell id="_SclktuzGxWFYy_Q4PIl-157" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;fontSize=20;" edge="1" parent="1" source="_SclktuzGxWFYy_Q4PIl-156" target="_SclktuzGxWFYy_Q4PIl-149">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_SclktuzGxWFYy_Q4PIl-156" value="城配围栏库存" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+        <mxCell id="_SclktuzGxWFYy_Q4PIl-156" value="城配围栏" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="-328" y="630" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_SclktuzGxWFYy_Q4PIl-159" value="成本中心" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;" vertex="1" parent="1">
@@ -372,7 +372,7 @@
         <mxCell id="_SclktuzGxWFYy_Q4PIl-195" value="直发围栏" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="-350" y="890" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_SclktuzGxWFYy_Q4PIl-198" value="直发围栏库存成本" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+        <mxCell id="_SclktuzGxWFYy_Q4PIl-198" value="直发履约库存成本" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="-140" y="820" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_SclktuzGxWFYy_Q4PIl-201" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;fontSize=20;" edge="1" parent="1" source="_SclktuzGxWFYy_Q4PIl-200" target="_SclktuzGxWFYy_Q4PIl-149">
@@ -398,8 +398,8 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_SclktuzGxWFYy_Q4PIl-200" value="直发围栏库存" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
-          <mxGeometry x="-470" y="635" width="120" height="60" as="geometry" />
+        <mxCell id="_SclktuzGxWFYy_Q4PIl-200" value="直发围栏" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="-473" y="625" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_SclktuzGxWFYy_Q4PIl-204" value="客户收货地址" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="767.5" y="215" width="120" height="60" as="geometry" />
