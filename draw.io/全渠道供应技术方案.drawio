@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-02T02:01:46.445Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.5" etag="oWSS-o0zca9AdfrUMrAA" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-02T02:04:25.439Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.5" etag="6wHkzGhA_EDrVqpEfZnu" type="github">
   <diagram id="9BSfSEBx7n1tUxAudPgJ" name="第 1 页">
     <mxGraphModel dx="2293" dy="921" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -510,14 +510,11 @@
             <mxPoint x="826" y="1160" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_SclktuzGxWFYy_Q4PIl-277" value="客户" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1390" y="330" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="_SclktuzGxWFYy_Q4PIl-278" value="商户中心" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="1365" y="190" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="_SclktuzGxWFYy_Q4PIl-279" value="品牌" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1390" y="240" width="120" height="60" as="geometry" />
+          <mxGeometry x="1390" y="280" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_SclktuzGxWFYy_Q4PIl-280" value="门店" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1390" y="425" width="120" height="60" as="geometry" />
