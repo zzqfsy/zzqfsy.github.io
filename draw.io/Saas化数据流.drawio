@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-13T08:04:44.320Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="j5w9K8ToR49PY9YjTrLb" version="21.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-13T08:07:47.614Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="9jwCO3DNrYTSrlEor6g2" version="21.0.2" type="github">
   <diagram name="第 1 页" id="f-2jJQEc6FKJp3XA3CI6">
     <mxGraphModel dx="2261" dy="1972" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -32,7 +32,7 @@
           <mxGeometry x="-150" y="80" width="180" height="140" as="geometry" />
         </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillStyle=auto;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="120" y="100" width="500" height="280" as="geometry" />
+          <mxGeometry x="100" y="100" width="520" height="280" as="geometry" />
         </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-1" value="鲜沐库存" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="120" height="60" as="geometry" />
@@ -56,7 +56,7 @@
         </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-30" value="送货入库" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ygLd1LW2gUZxlhopZpIC-16">
           <mxGeometry x="0.1692" y="4" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="24" y="-16" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-8" value="鲜沐采购单" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -66,13 +66,13 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="90" y="410" />
-              <mxPoint x="90" y="330" />
+              <mxPoint x="90" y="270" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-31" value="送货入库" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ygLd1LW2gUZxlhopZpIC-19">
           <mxGeometry x="0.5143" y="3" relative="1" as="geometry">
-            <mxPoint x="13" y="-21" as="offset" />
+            <mxPoint x="3" y="-3" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-9" value="Saas代仓采购单" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -99,7 +99,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-17" value="鲜沐入库" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="140" y="200" width="120" height="60" as="geometry" />
+          <mxGeometry x="110" y="150" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ygLd1LW2gUZxlhopZpIC-18" target="ygLd1LW2gUZxlhopZpIC-2">
           <mxGeometry relative="1" as="geometry" />
@@ -110,7 +110,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-18" value="Saas代仓入库" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="140" y="300" width="120" height="60" as="geometry" />
+          <mxGeometry x="130" y="240" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ygLd1LW2gUZxlhopZpIC-22" target="ygLd1LW2gUZxlhopZpIC-3">
           <mxGeometry relative="1" as="geometry" />
@@ -277,6 +277,9 @@
         <mxCell id="ygLd1LW2gUZxlhopZpIC-88" value="Saas代仓货品" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="800" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="ygLd1LW2gUZxlhopZpIC-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ygLd1LW2gUZxlhopZpIC-89" target="ygLd1LW2gUZxlhopZpIC-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-89" value="Saas直发采购单" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-110" y="555" width="120" height="60" as="geometry" />
         </mxCell>
@@ -322,6 +325,9 @@
         </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-108" value="系统来源" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
           <mxGeometry x="580" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ygLd1LW2gUZxlhopZpIC-111" value="Saas越库" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="310" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
