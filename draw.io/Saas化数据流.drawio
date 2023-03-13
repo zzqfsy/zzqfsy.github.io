@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-13T08:22:03.579Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="LxURdSvCofHXWtTCIRM0" version="21.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-13T08:23:22.423Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="Vd0BRQwn6WrhXXucs11b" version="21.0.2" type="github">
   <diagram name="第 1 页" id="f-2jJQEc6FKJp3XA3CI6">
     <mxGraphModel dx="2093" dy="1787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -305,7 +305,7 @@
         <mxCell id="ygLd1LW2gUZxlhopZpIC-92" value="鲜沐直供" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="190" y="-50" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ygLd1LW2gUZxlhopZpIC-94" value="Saas自配" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="ygLd1LW2gUZxlhopZpIC-94" value="Saas自配&lt;br&gt;(虚拟商品决定)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="585" y="-50" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ygLd1LW2gUZxlhopZpIC-101" value="Saas采购退货基于正向，同流程" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
