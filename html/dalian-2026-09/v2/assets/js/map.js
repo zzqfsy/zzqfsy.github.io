@@ -12,7 +12,7 @@
   const state = {
     day: requested === 'all' || data.days[requested] ? requested : 'd1', mode: 'plan', map: null, placeSearch: null,
     poi: new Map(Object.entries(cached.pois || {})), routes: new Map(Object.entries(cached.routes || {})), poiPromises: new Map(), routePromises: new Map(),
-    markerList: [], routeLines: [], selected: null, poiDone: 0, poiFound: 0, poiTotal: 0, routeDone: 0, routeFound: 0, routeTotal: 0
+    markerList: [], routeLines: [], selected: null, poiDone: 0, poiFound: 0, poiTotal: 0, routeDone: 0, routeFound: 0, routeTotal: 0, poiErrors: []
   };
   const $ = selector => document.querySelector(selector);
   const esc = value => String(value || '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -83,9 +83,11 @@
     const promise = new Promise(resolve => {
       let settled = false; const done = value => { if (!settled) { settled = true; resolve(value); } };
       const timeout = setTimeout(() => done(null), 12000);
-      state.placeSearch.search(item.query, (_resultStatus, result) => {
+      state.placeSearch.search(item.query, (resultStatus, result) => {
         clearTimeout(timeout); const poi = placeToCache(result?.poiList?.pois?.[0]);
-        if (poi) { state.poi.set(item.poiKey, poi); persistCache(); } done(poi);
+        if (poi) { state.poi.set(item.poiKey, poi); persistCache(); }
+        else if (state.poiErrors.length < 3) state.poiErrors.push(`${resultStatus || 'unknown'}${result?.info ? ` / ${result.info}` : ''}${result?.message ? ` / ${result.message}` : ''}`);
+        done(poi);
       });
     });
     state.poiPromises.set(item.poiKey, promise); return promise;
@@ -96,7 +98,7 @@
   async function preloadPois() {
     const unique = [...new Map(allItems().map(item => [item.poiKey, item])).values()]; state.poiTotal = unique.length; state.poiDone = unique.filter(item => state.poi.has(item.poiKey)).length; state.poiFound = state.poiDone; updateStatus();
     await runPool(unique.filter(item => !state.poi.has(item.poiKey)), 3, async item => { const poi = await resolvePoi(item); state.poiDone += 1; if (poi) state.poiFound += 1; updateStatus(); renderSheet(); renderMap(); });
-    if (!state.poiFound) error('没有取得任何高德 POI。请检查高德 Key 的 JS API 域名白名单和安全代理后重试。');
+    if (!state.poiFound) error(`没有取得任何高德 POI。接口返回：${state.poiErrors.join('；') || '请求超时'}。`);
   }
   function routeKey(day, index) { return `${day}-${index}`; }
   function segmentList(day) {
