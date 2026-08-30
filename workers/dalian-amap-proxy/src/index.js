@@ -1,19 +1,24 @@
 const ALLOWED_ORIGIN = 'https://zzqfsy.github.io';
 const PREFIX = '/_AMapService/';
 
-function corsHeaders(request) {
+function requestSource(request) {
   const origin = request.headers.get('Origin');
-  return origin === ALLOWED_ORIGIN
-    ? { 'Access-Control-Allow-Origin': ALLOWED_ORIGIN, 'Vary': 'Origin' }
-    : {};
+  if (origin === ALLOWED_ORIGIN) return 'origin';
+  const referer = request.headers.get('Referer');
+  try { return !origin && new URL(referer).origin === ALLOWED_ORIGIN ? 'referer' : ''; } catch (_) { return ''; }
+}
+
+function corsHeaders(request, source) {
+  return source ? { 'Access-Control-Allow-Origin': ALLOWED_ORIGIN, 'Vary': 'Origin, Referer', 'X-Trip-Proxy': source } : {};
 }
 
 export default {
   async fetch(request, env) {
     const requestUrl = new URL(request.url);
-    const cors = corsHeaders(request);
-    if (request.headers.get('Origin') !== ALLOWED_ORIGIN) {
-      return new Response('Forbidden', { status: 403, headers: { 'Vary': 'Origin' } });
+    const source = requestSource(request);
+    const cors = corsHeaders(request, source);
+    if (!source) {
+      return new Response('Forbidden', { status: 403, headers: { 'Vary': 'Origin, Referer', 'X-Trip-Proxy': 'blocked' } });
     }
     if (request.method === 'OPTIONS') {
       return new Response(null, {
