@@ -12,6 +12,9 @@ export default {
   async fetch(request, env) {
     const requestUrl = new URL(request.url);
     const cors = corsHeaders(request);
+    if (request.headers.get('Origin') !== ALLOWED_ORIGIN) {
+      return new Response('Forbidden', { status: 403, headers: { 'Vary': 'Origin' } });
+    }
     if (request.method === 'OPTIONS') {
       return new Response(null, {
         status: 204,
