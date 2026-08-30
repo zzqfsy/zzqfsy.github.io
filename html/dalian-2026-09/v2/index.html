@@ -1,1 +1,28 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#075b70"><title>大连 3 天｜东港亲子美食攻略</title><link rel="stylesheet" href="assets/css/trip.css"></head><body><main class="shell"><header class="hero"><div class="eyebrow">2026.09.12 — 09.14 · 东港住两晚</div><h1>大连 3 天<br>吃好，也走得松</h1><p>亲子优先：中山—东港、莲花山—星海、自然博物馆收尾。按时间走，不把备选塞进主线。</p></header><a class="map-link" href="map.html?day=d1"><span><strong>打开真实高德路线地图</strong><small>按天看确认行程；点击任一步骤或地图编号查看点位信息与导航。</small></span><b>›</b></a><section><h2 class="section-title">确认行程</h2><p class="hint">点“真实高德路线地图”可按当天路线、候选点和地图标记查看；首页保留最清晰的小时顺序。</p><div id="days"></div></section><section><h2 class="section-title">出发前只确认四件事</h2><div class="notice"><b>民宿：</b>替换为精确高德门牌；<b>餐厅：</b>正黄旗、樱木千鹤先看取号/订位；<b>天气：</b>莲花山遇风雨切换博物馆；<b>返程：</b>确认 14:00 是离开市区、到机场还是起飞。</div></section></main><script src="assets/js/itinerary-data.js"></script><script>const icon={stay:'⌂',food:'■',sight:'●',coffee:'◆',market:'⬡'};const host=document.querySelector('#days');host.innerHTML=Object.entries(DALIAN_TRIP.days).map(([id,d])=>`<article class="day-card" style="--day:${d.color}"><header class="day-head"><span>${d.label}</span><h2>${d.title}</h2></header>${d.stops.map((s,i)=>`<div class="stop"><time>${s.time}</time><div><b>${icon[s.kind]||'•'} ${s.label}</b>${s.budget?`<span class="pill">${s.budget}</span>`:''}<p>${s.info}</p></div></div>`).join('')}<a class="map-link" style="margin:12px 14px;background:${d.color}" href="map.html?day=${id}"><span><strong>在地图查看 ${d.label}</strong><small>路线、门店、候选点与导航</small></span><b>›</b></a></article>`).join('');</script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#075b70"><title>大连 3 天｜东港亲子美食攻略</title>
+  <link rel="stylesheet" href="assets/css/trip.css"><link rel="stylesheet" href="assets/css/guide.css">
+</head>
+<body><main class="shell guide-shell">
+  <header class="guide-hero">
+    <p class="eyebrow">2026.09.12 — 09.14 · 东港住两晚</p>
+    <h1>大连，吃得好<br>也走得松</h1>
+    <p>这不是景点清单，而是一份带娃也能照着走的小时攻略。主线只放确认安排，排队和下雨才看备选。</p>
+    <div class="hero-facts"><span>✈︎ 12 日 12:00 落地</span><span>⌂ 东港民宿 × 2 晚</span><span>◷ 14 日 14:00 前结束</span></div>
+  </header>
+  <nav class="day-nav" aria-label="攻略目录"><a href="#d1">Day 1</a><a href="#d2">Day 2</a><a href="#d3">Day 3</a><a class="map-nav" href="map.html?day=d1">地图 ↗</a></nav>
+  <section class="decision-card"><p class="section-kicker">先记住这四件事</p><div class="decision-grid"><p><b>Day 1</b>先放行李，再进中山吃午饭；夜景只留东港。</p><p><b>Day 2</b>莲花山与星海是一条线，晚饭就近吃日料。</p><p><b>Day 3</b>博物馆只看重点，11:15 开始收尾午饭。</p><p><b>民宿做饭</b>只作为 Day 1 菜场后的可选项，最多一顿。</p></div></section>
+  <section class="guide-section"><div class="section-heading"><p class="section-kicker">CONFIRMED ITINERARY</p><h2>按时间走就好</h2><p>每一天先看餐食主选，再按需展开具体停留和亲子提醒。</p></div><div id="days"></div></section>
+  <section class="check-card"><p class="section-kicker">出发当天 · 30 秒核对</p><p>民宿精确门牌、樱木/正黄旗订位、东北灵丹闭店时间、14:00 的真实返程节点。</p></section>
+</main>
+<script src="assets/js/itinerary-data.js"></script>
+<script>
+const icons={stay:'⌂',food:'食',sight:'景',coffee:'咖',market:'备'};
+const host=document.querySelector('#days');
+const route=d=>d.stops.map(x=>x.label.replace(/^(午饭 · |晚饭 · |咖啡 · |夜景 · |City Walk · )/, '')).join(' · ');
+const stop=(s,open)=>`<details class="timeline-stop" ${open?'open':''}><summary><time>${s.time}</time><span class="stop-icon ${s.kind}">${icons[s.kind]||'•'}</span><span class="stop-copy"><b>${s.label}</b>${s.budget?`<small>${s.budget}</small>`:''}</span><i>⌄</i></summary><div class="stop-detail"><p>${s.info}</p>${s.fallback?`<p class="fallback"><b>排队替换：</b>${s.fallback}</p>`:''}</div></details>`;
+host.innerHTML=Object.entries(DALIAN_TRIP.days).map(([id,d],dayIndex)=>{const meals=d.stops.filter(x=>x.kind==='food');return `<details class="day-guide" id="${id}" style="--day:${d.color}" ${dayIndex===0?'open':''}><summary class="day-summary"><span class="day-number">${d.label}</span><span><b>${d.title}</b><small>${route(d)}</small></span><i>⌄</i></summary><div class="day-body"><div class="meal-strip">${meals.map(m=>`<article><span>${m.label.startsWith('午')?'午饭主选':'晚饭主选'}</span><b>${m.label.replace(/^(午饭 · |晚饭 · )/,'')}</b><small>${m.budget||'按当天菜单'}</small></article>`).join('')}</div><p class="timeline-caption">小时安排</p><div class="timeline">${d.stops.map((s,i)=>stop(s,i===0&&dayIndex===0)).join('')}</div><details class="candidate-list"><summary>排队 / 下雨 / 临时补给时，看 ${d.candidates.length} 个备选</summary><ul>${d.candidates.map(x=>`<li><b>${x.name}</b><span>${x.reason}</span></li>`).join('')}</ul></details><a class="day-map" href="map.html?day=${id}">在高德地图查看 ${d.label} 路线 <b>↗</b></a></div></details>`}).join('');
+document.querySelectorAll('.day-nav a[href^="#"]').forEach(link=>link.addEventListener('click',()=>document.querySelector(link.getAttribute('href')).open=true));
+</script></body></html>
