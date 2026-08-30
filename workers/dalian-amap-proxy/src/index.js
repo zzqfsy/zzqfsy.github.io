@@ -37,7 +37,15 @@ export default {
       ? new URL('https://webapi.amap.com/v4/map/styles')
       : new URL(`https://restapi.amap.com/${suffix}`);
     for (const [key, value] of requestUrl.searchParams) upstream.searchParams.append(key, value);
-    upstream.searchParams.set('jscode', env.AMAP_SECURITY_JS_CODE);
+    // The JS SDK only needs the JS key for loading the map. POI and routing are
+    // Web Service API calls, so an optional server-only service key is preferred
+    // here. It prevents a browser key from being rejected with 10009.
+    if (suffix !== 'v4/map/styles' && env.AMAP_WEBSERVICE_KEY) {
+      upstream.searchParams.set('key', env.AMAP_WEBSERVICE_KEY);
+      upstream.searchParams.delete('jscode');
+    } else {
+      upstream.searchParams.set('jscode', env.AMAP_SECURITY_JS_CODE);
+    }
     const response = await fetch(upstream, { headers: { 'User-Agent': 'dalian-trip-map-proxy/1.0' } });
     const headers = new Headers(response.headers);
     for (const [key, value] of Object.entries(cors)) headers.set(key, value);
