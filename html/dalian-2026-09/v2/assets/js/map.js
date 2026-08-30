@@ -12,7 +12,7 @@
   const state = {
     day: requested === 'all' || data.days[requested] ? requested : 'd1', mode: 'plan', map: null, placeSearch: null,
     poi: new Map(Object.entries(cached.pois || {})), routes: new Map(Object.entries(cached.routes || {})), poiPromises: new Map(), routePromises: new Map(),
-    markerList: [], routeLines: [], selected: null, poiDone: 0, poiTotal: 0, routeDone: 0, routeTotal: 0
+    markerList: [], routeLines: [], selected: null, poiDone: 0, poiFound: 0, poiTotal: 0, routeDone: 0, routeFound: 0, routeTotal: 0
   };
   const $ = selector => document.querySelector(selector);
   const esc = value => String(value || '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -51,9 +51,10 @@
   function placeToCache(poi) { const point = coords(poi); return point ? { name: poi.name || '', location: point, address: poi.address || '', district: poi.district || '' } : null; }
   function statusText() {
     if (!state.poiTotal) return '初始化地图';
-    if (state.poiDone < state.poiTotal) return `定位 ${state.poiDone}/${state.poiTotal}`;
-    if (state.routeDone < state.routeTotal) return `路线 ${state.routeDone}/${state.routeTotal}`;
-    return 'POI / 路线已就绪';
+    if (state.poiDone < state.poiTotal) return `定位 ${state.poiFound}/${state.poiTotal}`;
+    if (state.poiFound < state.poiTotal) return `POI ${state.poiFound}/${state.poiTotal}`;
+    if (state.routeDone < state.routeTotal) return `路线 ${state.routeFound}/${state.routeTotal}`;
+    return state.routeFound < state.routeTotal ? `路线 ${state.routeFound}/${state.routeTotal}` : 'POI / 路线已就绪';
   }
   function updateStatus() { $('#map-status').textContent = statusText(); }
 
@@ -93,8 +94,9 @@
     let cursor = 0; const workers = Array.from({ length: Math.min(limit, items.length) }, async () => { while (cursor < items.length) { const item = items[cursor++]; await task(item); } }); await Promise.all(workers);
   }
   async function preloadPois() {
-    const unique = [...new Map(allItems().map(item => [item.poiKey, item])).values()]; state.poiTotal = unique.length; state.poiDone = unique.filter(item => state.poi.has(item.poiKey)).length; updateStatus();
-    await runPool(unique.filter(item => !state.poi.has(item.poiKey)), 3, async item => { await resolvePoi(item); state.poiDone += 1; updateStatus(); renderSheet(); renderMap(); });
+    const unique = [...new Map(allItems().map(item => [item.poiKey, item])).values()]; state.poiTotal = unique.length; state.poiDone = unique.filter(item => state.poi.has(item.poiKey)).length; state.poiFound = state.poiDone; updateStatus();
+    await runPool(unique.filter(item => !state.poi.has(item.poiKey)), 3, async item => { const poi = await resolvePoi(item); state.poiDone += 1; if (poi) state.poiFound += 1; updateStatus(); renderSheet(); renderMap(); });
+    if (!state.poiFound) error('没有取得任何高德 POI。请检查高德 Key 的 JS API 域名白名单和安全代理后重试。');
   }
   function routeKey(day, index) { return `${day}-${index}`; }
   function segmentList(day) {
@@ -117,8 +119,8 @@
     state.routePromises.set(segment.key, promise); return promise;
   }
   async function preloadRoutes() {
-    const segments = dayIds.flatMap(segmentList); state.routeTotal = segments.length; state.routeDone = segments.filter(segment => state.routes.has(segment.key)).length; updateStatus();
-    await runPool(segments.filter(segment => !state.routes.has(segment.key)), 2, async segment => { await resolveRoute(segment); state.routeDone += 1; updateStatus(); renderSheet(); drawRoutes(); });
+    const segments = dayIds.flatMap(segmentList); state.routeTotal = segments.length; state.routeDone = segments.filter(segment => state.routes.has(segment.key)).length; state.routeFound = state.routeDone; updateStatus();
+    await runPool(segments.filter(segment => !state.routes.has(segment.key)), 2, async segment => { const route = await resolveRoute(segment); state.routeDone += 1; if (route?.length > 1) state.routeFound += 1; updateStatus(); renderSheet(); drawRoutes(); });
   }
   function drawRoutes() {
     if (!state.map || state.mode !== 'plan') return;
