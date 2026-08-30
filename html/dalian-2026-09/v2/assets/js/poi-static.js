@@ -2,8 +2,10 @@
  * These are intentionally local page data: first render never depends on a
  * live place-search request. Coordinates use the GCJ-02 system used by AMap. */
 window.DALIAN_STATIC_POIS = {
-  '大连东港商务区': { name: '大连东港商务区', location: [121.698262, 38.918777], address: '港兴路105号' },
+  '大连东港绿地中心': { name: '绿地中心', location: [121.671445, 38.925956], address: '港隆路12号（会议中心地铁站D口步行290米）' },
   '澳深鱼市 祝庆街店 大连': { name: '澳深鱼市', location: [121.645391, 38.929055], address: '竹青街2-3号' },
+  '大连俄罗斯风情街': { name: '大连·俄罗斯风情街', location: [121.635293, 38.927883], address: '团结街19号' },
+  '大连商场': { name: '大连商场', location: [121.634563, 38.916979], address: '青三街1号' },
   '中山广场 大连': { name: '中山广场', location: [121.643827, 38.921549], address: '中山路552号（中山广场地铁站D口步行60米）' },
   '东北灵丹 大连': { name: '東北灵丹·SUP（南山路超级萃取店）', location: [121.650227, 38.914686], address: '南山路112-1-6号' },
   '东方水城 大连': { name: '海昌·东方水城', location: [121.693004, 38.924020], address: '港浦路114号' },

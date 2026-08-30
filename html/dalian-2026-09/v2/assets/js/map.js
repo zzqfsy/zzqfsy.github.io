@@ -5,8 +5,8 @@
   const cacheLifetime = 1000 * 60 * 60 * 24 * 14;
   const dayIds = Object.keys(data.days);
   const dayColor = Object.fromEntries(Object.entries(data.days).map(([id, value]) => [id, value.color]));
-  const typeIcon = { stay: '⌂', food: '食', sight: '景', coffee: '咖', market: '备' };
-  const typeName = { stay: '住/夜景', food: '餐饮', sight: '景点', coffee: '咖啡', market: '市场/雨天' };
+  const typeIcon = { stay: '⌂', food: '食', sight: '景', coffee: '咖', shopping: '逛', market: '备' };
+  const typeName = { stay: '住/夜景', food: '餐饮', sight: '景点', coffee: '咖啡', shopping: '商场/逛街', market: '市场/雨天' };
   const requested = new URLSearchParams(location.search).get('day');
   const cached = readCache();
   const state = {
@@ -72,7 +72,7 @@
     $('#route-steps').querySelectorAll('[data-key]').forEach(button => button.addEventListener('click', () => showItem(items.find(item => item.poiKey === button.dataset.key))));
   }
   function markerContent(item) {
-    const radius = { food: '50%', sight: '8px', coffee: '4px', market: '50%', stay: '50%' }[item.kind] || '50%';
+    const radius = { food: '50%', sight: '8px', coffee: '4px', shopping: '8px', market: '50%', stay: '50%' }[item.kind] || '50%';
     const outer = item.kind === 'coffee' ? 'transform:rotate(45deg)' : ''; const inner = item.kind === 'coffee' ? 'transform:rotate(-45deg)' : '';
     return `<div title="${esc(typeName[item.kind])}" style="min-width:34px;height:34px;padding:0 5px;border:3px solid #fff;border-radius:${radius};background:${pointColor(item)};box-shadow:0 2px 9px #16333a77;color:#fff;display:grid;place-items:center;font:800 10px -apple-system,BlinkMacSystemFont,'PingFang SC';${outer}"><span style="${inner}">${state.mode === 'plan' ? labelFor(item) : typeIcon[item.kind]}</span></div>`;
   }

@@ -1,18 +1,20 @@
 window.DALIAN_TRIP = {
   city: '大连',
-  origin: { id: 'stay', name: '东港民宿（待替换精确门牌）', query: '大连东港商务区', type: 'stay', note: '请在出发前把此处替换为民宿的高德地点；当前仅是东港区域锚点。' },
+  origin: { id: 'stay', name: '东港绿地中心民宿', query: '大连东港绿地中心', type: 'stay', note: '民宿位于东港绿地中心；出发前如拿到具体楼栋/门牌，可在高德中再核对一次。' },
   days: {
     d1: {
       label: 'Day 1', title: '中山 City Walk · 东港夜景', color: '#ee624e',
       stops: [
-        { id: 'stay-in', ref: 'stay', time: '13:10', label: '东港民宿 · 放行李', kind: 'stay', info: '机场到东港约 45–60 分钟，先放行李再进中山。' },
+        { id: 'stay-in', ref: 'stay', time: '13:10', label: '东港绿地中心民宿 · 放行李', kind: 'stay', info: '机场到东港约 45–60 分钟，先放行李再进中山。' },
         { id: 'aoshen', name: '澳深鱼市·祝庆街店', query: '澳深鱼市 祝庆街店 大连', time: '14:10', kind: 'food', label: '午饭 · 澳深鱼市', budget: '人均约 ¥127', info: '经典海鲜饭 ¥228 或三文鱼畅享海鲜饭 ¥88；孩子以熟食、白饭为主。', fallback: '排队超 30 分钟改久時。' },
-        { id: 'zhongshan', name: '中山广场', query: '中山广场 大连', time: '15:20', kind: 'sight', label: 'City Walk · 中山广场', info: '祝庆街 / 人民路 → 中山广场，慢走看近代建筑，约 2 公里。' },
-        { id: 'lingdan', name: '东北灵丹', query: '东北灵丹 大连', time: '16:05', kind: 'coffee', label: '咖啡 · 东北灵丹', info: '超级萃取美式或创意特调；以当天闭店时间为准。' },
-        { id: 'stay-back', ref: 'stay', time: '17:25', label: '回东港民宿 · 缓冲', kind: 'stay', info: '休息、换衣服；如计划民宿做一顿饭，再顺路买菜。' },
-        { id: 'watercity', name: '东方水城运河', query: '东方水城 大连', time: '18:30', kind: 'sight', label: '夜景 · 东方水城', info: '只安排傍晚至夜间散步、拍照，不占用白天。' },
-        { id: 'zhenghuangqi', name: '正黄旗海鲜烧烤·东港店', query: '正黄旗海鲜烧烤 东港店 大连', time: '19:45', kind: 'food', label: '晚饭 · 正黄旗', budget: '人均约 ¥160', info: '海肠捞饭或海胆二选一，加烤贝类和熟食；别与午饭重复刺身。' },
-        { id: 'boardwalk', name: '东港木栈道', query: '东港木栈道 大连', time: '21:10', kind: 'sight', label: '夜景 · 东港木栈道', info: '饭后有精神再走；成人夜宵与它二选一。' }
+        { id: 'russian', name: '大连·俄罗斯风情街', query: '大连俄罗斯风情街', time: '15:25', kind: 'sight', label: 'City Walk · 俄罗斯风情街', info: '从祝庆街步行过去约 10–15 分钟；看建筑、轻松拍照即可，不必久逛。' },
+        { id: 'dalianmall', name: '大连商场', query: '大连商场', time: '16:05', kind: 'shopping', label: 'City Walk · 大连商场', info: '顺路看老商场与青泥洼桥街区；如带娃累了可进店吹空调、补给。' },
+        { id: 'zhongshan', name: '中山广场', query: '中山广场 大连', time: '16:40', kind: 'sight', label: 'City Walk · 中山广场', info: '从大连商场步行至中山广场，慢走看近代建筑与放射状街道。' },
+        { id: 'lingdan', name: '东北灵丹', query: '东北灵丹 大连', time: '17:10', kind: 'coffee', label: '咖啡 · 东北灵丹', info: '超级萃取美式或创意特调；以当天闭店时间为准。' },
+        { id: 'stay-back', ref: 'stay', time: '17:45', label: '回绿地中心民宿 · 缓冲', kind: 'stay', info: '休息、换衣服；如计划民宿做一顿饭，再顺路买菜。' },
+        { id: 'zhenghuangqi', name: '正黄旗海鲜烧烤·东港店', query: '正黄旗海鲜烧烤 东港店 大连', time: '18:45', kind: 'food', label: '晚饭 · 正黄旗', budget: '人均约 ¥160', info: '海肠捞饭或海胆二选一，加烤贝类和熟食；别与午饭重复刺身。' },
+        { id: 'watercity', name: '东方水城运河', query: '东方水城 大连', time: '20:20', kind: 'sight', label: '夜景 · 东方水城', info: '晚饭后再来散步、拍照；20:00 后灯光氛围更好。' },
+        { id: 'boardwalk', name: '东港木栈道', query: '东港木栈道 大连', time: '21:10', kind: 'sight', label: '夜景 · 东港木栈道', info: '水城后沿东港散步；饭后有精神再走，成人夜宵与它二选一。' }
       ],
       candidates: [
         { name: '久時·生鱼饭·咖喱', query: '久時 生鱼饭 咖喱 大连', kind: 'food', reason: '澳深排队时的午饭替换' },
