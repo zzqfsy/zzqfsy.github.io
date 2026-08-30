@@ -1,7 +1,7 @@
 (() => {
   const data = window.DALIAN_TRIP;
   const config = window.TRIP_MAP_CONFIG || {};
-  const cacheKey = 'dalian-trip-map-v5';
+  const cacheKey = 'dalian-trip-map-v6';
   const cacheLifetime = 1000 * 60 * 60 * 24 * 14;
   const dayIds = Object.keys(data.days);
   const dayColor = Object.fromEntries(Object.entries(data.days).map(([id, value]) => [id, value.color]));
@@ -78,6 +78,11 @@
   }
   function clearVisuals() { if (state.markerList.length) state.map.remove(state.markerList); if (state.routeLines.length) state.map.remove(state.routeLines); state.markerList = []; state.routeLines = []; }
   function resolvePoi(item) {
+    const embedded = placeToCache(window.DALIAN_STATIC_POIS?.[item.query]);
+    if (embedded) {
+      state.poi.set(item.poiKey, embedded);
+      return Promise.resolve(embedded);
+    }
     if (state.poi.has(item.poiKey)) return Promise.resolve(state.poi.get(item.poiKey));
     if (state.poiPromises.has(item.poiKey)) return state.poiPromises.get(item.poiKey);
     const promise = new Promise(resolve => {

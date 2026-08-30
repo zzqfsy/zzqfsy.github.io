@@ -43,6 +43,11 @@ export default {
     if (suffix !== 'v4/map/styles' && env.AMAP_WEBSERVICE_KEY) {
       upstream.searchParams.set('key', env.AMAP_WEBSERVICE_KEY);
       upstream.searchParams.delete('jscode');
+      // AMap's JS SDK sends `platform=JS` even for its internal Web Service
+      // requests. Once the proxy substitutes a Web Service key, retaining that
+      // marker makes AMap reject the request as a platform mismatch (10009).
+      upstream.searchParams.delete('platform');
+      upstream.searchParams.delete('s');
     } else {
       upstream.searchParams.set('jscode', env.AMAP_SECURITY_JS_CODE);
     }
