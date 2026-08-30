@@ -2,9 +2,10 @@
   const data = window.DALIAN_TRIP;
   const config = window.TRIP_MAP_CONFIG || {};
   const queryDay = new URLSearchParams(location.search).get('day');
-  const state = { day: data.days[queryDay] ? queryDay : 'd1', mode: 'plan', map: null, placeSearch: null, resolved: new Map(), markers: [], lines: [], selected: null };
+  const state = { day: data.days[queryDay] ? queryDay : 'd1', mode: 'plan', map: null, placeSearch: null, resolved: new Map(), markers: [], segmentLines: [], selected: null, renderToken: 0 };
   const typeIcon = { stay: '⌂', food: '■', sight: '●', coffee: '◆', market: '⬡' };
   const typeName = { stay: '住/夜景', food: '餐饮', sight: '景点', coffee: '咖啡', market: '市场/雨天' };
+  document.head.insertAdjacentHTML('beforeend', '<style>.segment-route{display:block;width:100%;margin-top:10px;padding:11px;border:1px solid #c6e1e3;border-radius:10px;background:#eef8f8;color:#075b70;text-align:center;font-size:13px;font-weight:850}</style>');
   const error = (message) => { const el = document.querySelector('#map-error'); el.textContent = message; el.classList.remove('hidden'); };
   const esc = (value) => String(value || '').replace(/[&<>"']/g, s => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[s]));
 
@@ -43,12 +44,14 @@
     const address = poi?.address ? `${poi.district || ''}${poi.address}` : '正在按高德结果核对位置';
     const url = poi?.location ? `https://uri.amap.com/marker?position=${poi.location.lng},${poi.location.lat}&name=${encodeURIComponent(item.name)}&coordinate=gaode&callnative=1` : `https://uri.amap.com/search?keyword=${encodeURIComponent(item.query)}&city=大连`;
     const drawer = document.querySelector('#drawer');
-    drawer.innerHTML = `<button class="drawer-close" aria-label="收起">×</button><span class="drawer-tag">${typeName[item.kind] || '点位'} · ${esc(data.days[state.day].label)}</span><h2>${typeIcon[item.kind] || '•'} ${esc(item.label || item.name)}</h2><div class="fact"><div><b>时间 / 预算</b><span>${esc(item.time || '候选')}${item.budget ? ` · ${esc(item.budget)}` : ''}</span></div><div><b>高德位置</b><span>${esc(address)}</span></div></div><p>${esc(item.info || item.reason || '按当天实际情况选择。')}</p>${item.fallback ? `<p><b>替换：</b>${esc(item.fallback)}</p>` : ''}<a class="navigate" target="_blank" rel="noopener" href="${url}">在高德中核对 / 导航 ↗</a>`;
+    const index = currentItems().findIndex(x => x.id === item.id);
+    drawer.innerHTML = `<button class="drawer-close" aria-label="收起">×</button><span class="drawer-tag">${typeName[item.kind] || '点位'} · ${esc(data.days[state.day].label)}</span><h2>${typeIcon[item.kind] || '•'} ${esc(item.label || item.name)}</h2><div class="fact"><div><b>时间 / 预算</b><span>${esc(item.time || '候选')}${item.budget ? ` · ${esc(item.budget)}` : ''}</span></div><div><b>高德位置</b><span>${esc(address)}</span></div></div><p>${esc(item.info || item.reason || '按当天实际情况选择。')}</p>${item.fallback ? `<p><b>替换：</b>${esc(item.fallback)}</p>` : ''}${state.mode === 'plan' && index > 0 ? `<button class="segment-route" data-segment="${index}">查看上一段真实高德路线</button>` : ''}<a class="navigate" target="_blank" rel="noopener" href="${url}">在高德中核对 / 导航 ↗</a>`;
     drawer.classList.add('open');
     drawer.querySelector('.drawer-close').addEventListener('click', closeDrawer);
+    drawer.querySelector('[data-segment]')?.addEventListener('click', () => drawSegment(index));
   }
   function closeDrawer() { document.querySelector('#drawer').classList.remove('open'); state.selected = null; }
-  function clearMap() { state.map.remove(state.markers); state.map.remove(state.lines); state.markers = []; state.lines = []; }
+  function clearMap() { state.map.remove(state.markers); state.map.remove(state.segmentLines); state.markers = []; state.segmentLines = []; }
   function findPoi(item) {
     if (state.resolved.has(item.id)) return Promise.resolve(state.resolved.get(item.id));
     return new Promise(resolve => state.placeSearch.search(item.query, (status, result) => {
@@ -58,39 +61,35 @@
     }));
   }
   function markerHtml(index, item, color) { return `<div style="width:32px;height:32px;border:3px solid #fff;border-radius:50%;background:${color};box-shadow:0 2px 8px #16333a55;color:#fff;display:grid;place-items:center;font:800 13px -apple-system,BlinkMacSystemFont,'PingFang SC'">${state.mode === 'plan' ? index + 1 : typeIcon[item.kind] || '•'}</div>`; }
-  async function drawRoute(items, pois, color) {
-    if (state.mode !== 'plan' || pois.length < 2) return;
-    for (let i = 1; i < pois.length; i += 1) {
-      const from = pois[i - 1], to = pois[i];
-      if (!from || !to) continue;
-      await new Promise(resolve => {
-        const driving = new AMap.Driving({ policy: AMap.DrivingPolicy.LEAST_TIME, hideMarkers: true });
-        driving.search(from.location, to.location, (status, result) => {
-          if (status === 'complete' && result?.routes?.[0]?.steps) {
-            const path = result.routes[0].steps.flatMap(step => step.path || []);
-            if (path.length) { const line = new AMap.Polyline({ path, isOutline: true, outlineColor: '#fff', borderWeight: 2, strokeColor: color, strokeOpacity: .82, strokeWeight: 6, lineJoin: 'round' }); state.lines.push(line); state.map.add(line); }
-          }
-          resolve();
-        });
-      });
-    }
+  async function drawSegment(index) {
+    const items = currentItems();
+    const [from, to] = await Promise.all([findPoi(items[index - 1]), findPoi(items[index])]);
+    if (!from?.location || !to?.location || state.mode !== 'plan') return;
+    state.map.remove(state.segmentLines); state.segmentLines = [];
+    const driving = new AMap.Driving({ policy: AMap.DrivingPolicy.LEAST_TIME, hideMarkers: true });
+    driving.search(from.location, to.location, (status, result) => {
+      const path = status === 'complete' ? result?.routes?.[0]?.steps?.flatMap(step => step.path || []) : [];
+      if (!path?.length) return;
+      const line = new AMap.Polyline({ path, isOutline: true, outlineColor: '#fff', borderWeight: 2, strokeColor: data.days[state.day].color, strokeOpacity: .9, strokeWeight: 6, lineJoin: 'round' });
+      state.segmentLines = [line]; state.map.add(line); state.map.setFitView([line], false, [80, 70, 260, 70]);
+    });
   }
   async function renderMap() {
     clearMap();
     const items = currentItems();
-    const pois = await Promise.all(items.map(findPoi));
+    const token = ++state.renderToken;
     const color = data.days[state.day].color;
     const valid = [];
-    pois.forEach((poi, index) => {
-      if (!poi?.location) return;
+    await Promise.all(items.map(async (item, index) => {
+      const poi = await findPoi(item);
+      if (token !== state.renderToken || !poi?.location) return;
       valid.push(poi);
-      const marker = new AMap.Marker({ position: poi.location, content: markerHtml(index, items[index], color), offset: new AMap.Pixel(-16, -16), anchor: 'center', zIndex: 120 });
-      marker.on('click', () => showItem(items[index]));
+      const marker = new AMap.Marker({ position: poi.location, content: markerHtml(index, item, color), offset: new AMap.Pixel(-16, -16), anchor: 'center', zIndex: 120 });
+      marker.on('click', () => showItem(item));
       state.markers.push(marker);
-    });
-    state.map.add(state.markers);
+      state.map.add(marker);
+    }));
     if (valid.length) state.map.setFitView(state.markers, false, [80, 70, 240, 70]);
-    if (state.mode === 'plan') await drawRoute(items, pois, color);
   }
   async function render() { renderSwitches(); renderSheet(); await renderMap(); }
   function boot() {
