@@ -1,0 +1,6 @@
+name = "dalian-amap-proxy"
+main = "src/index.js"
+compatibility_date = "2026-08-30"
+
+# Set AMAP_SECURITY_JS_CODE with `wrangler secret put AMAP_SECURITY_JS_CODE`.
+# It must never be committed to Git.
