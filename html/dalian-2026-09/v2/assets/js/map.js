@@ -74,7 +74,10 @@
   function markerContent(item) {
     const radius = { food: '50%', sight: '8px', coffee: '4px', shopping: '8px', market: '50%', stay: '50%' }[item.kind] || '50%';
     const outer = item.kind === 'coffee' ? 'transform:rotate(45deg)' : ''; const inner = item.kind === 'coffee' ? 'transform:rotate(-45deg)' : '';
-    return `<div title="${esc(typeName[item.kind])}" style="min-width:34px;height:34px;padding:0 5px;border:3px solid #fff;border-radius:${radius};background:${pointColor(item)};box-shadow:0 2px 9px #16333a77;color:#fff;display:grid;place-items:center;font:800 10px -apple-system,BlinkMacSystemFont,'PingFang SC';${outer}"><span style="${inner}">${state.mode === 'plan' ? labelFor(item) : typeIcon[item.kind]}</span></div>`;
+    const showName = state.mode === 'plan' && state.day !== 'all' && ['sight', 'shopping'].includes(item.kind);
+    const shortName = String(item.label || item.name || '').replace(/^(City Walk|夜景|午饭|晚饭|咖啡) · /, '').replace(/ · (看海休息|索道\/观景)$/, '');
+    const caption = showName ? `<small style="position:absolute;left:30px;top:4px;z-index:1;white-space:nowrap;padding:2px 5px;border-radius:7px;background:#fffffff0;color:#17363e;box-shadow:0 1px 5px #16333a33;font:700 10px -apple-system,BlinkMacSystemFont,'PingFang SC';${inner}">${esc(shortName)}</small>` : '';
+    return `<div title="${esc(item.label || item.name || typeName[item.kind])}" style="position:relative;min-width:34px;height:34px;padding:0 5px;border:3px solid #fff;border-radius:${radius};background:${pointColor(item)};box-shadow:0 2px 9px #16333a77;color:#fff;display:grid;place-items:center;font:800 10px -apple-system,BlinkMacSystemFont,'PingFang SC';${outer}"><span style="${inner}">${state.mode === 'plan' ? labelFor(item) : typeIcon[item.kind]}</span>${caption}</div>`;
   }
   function clearVisuals() { if (state.markerList.length) state.map.remove(state.markerList); if (state.routeLines.length) state.map.remove(state.routeLines); state.markerList = []; state.routeLines = []; }
   function resolvePoi(item) {
