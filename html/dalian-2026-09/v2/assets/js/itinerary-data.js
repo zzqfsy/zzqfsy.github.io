@@ -34,7 +34,6 @@ window.DALIAN_TRIP = {
         { id: 'yingmu', name: '樱木千鹤·星海店', query: '樱木千鹤 星海店 大连', time: '18:30', kind: 'food', label: '晚饭 · 樱木千鹤', budget: '人均约 ¥327', info: '海胆饭 ¥299 或海鲜饭 ¥199 二选一；提前订位。' }
       ],
       candidates: [
-        { name: '日月明·星海店', query: '日月明 星海店 大连', kind: 'food', reason: '日月昇排队或想吃更多热菜时替换' },
         { name: '牟传仁·星海新天地店', query: '牟传仁 星海新天地店 大连', kind: 'food', reason: '饺子、豆腐、热菜更适合孩子' },
         { name: '杉木日本料理·港湾广场店', query: '杉木日本料理 港湾广场 大连', kind: 'food', reason: '与樱木二选一，不叠加' },
         { name: 'Carrot Coffee', query: 'Carrot Coffee 大连', kind: 'coffee', reason: '按当天最近门店决定，与 Dive 二选一' },

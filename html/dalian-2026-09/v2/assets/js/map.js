@@ -11,7 +11,7 @@
   const cached = readCache();
   const state = {
     day: requested === 'all' || data.days[requested] ? requested : 'd1', mode: 'plan', map: null, placeSearch: null,
-    poi: new Map(Object.entries(cached.pois || {})), routes: new Map(Object.entries(cached.routes || {})), poiPromises: new Map(), routePromises: new Map(),
+    poi: new Map(Object.entries(cached.pois || {})), routes: new Map([...Object.entries(window.DALIAN_STATIC_ROUTES || {}), ...Object.entries(cached.routes || {})]), poiPromises: new Map(), routePromises: new Map(),
     markerList: [], routeLines: [], selected: null, poiDone: 0, poiFound: 0, poiTotal: 0, routeDone: 0, routeFound: 0, routeTotal: 0, poiErrors: []
   };
   const $ = selector => document.querySelector(selector);
