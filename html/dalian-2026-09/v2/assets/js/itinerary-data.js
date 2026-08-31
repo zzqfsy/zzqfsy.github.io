@@ -6,8 +6,8 @@ window.DALIAN_TRIP = {
       label: 'Day 1', title: '中山日料 · 咖啡商超 · 东港夜景', color: '#ee624e',
       stops: [
         { id: 'stay-in', ref: 'stay', time: '13:10', label: '东港绿地中心民宿 · 放行李', kind: 'stay', info: '机场到东港约 45–60 分钟，先放行李再进中山。' },
-        { id: 'sugiki', name: 'SUGIKI·杉木日本料理', query: '杉木日本料理 港湾广场 大连', time: '14:10', kind: 'food', label: '午饭 · 杉木日料', budget: '人均约 ¥250–350', info: '放行李后直接吃日料；刺身与热食搭配，带娃优先点熟食和米饭。', fallback: '临时没位可改澳深鱼市或久時。' },
-        { id: 'russian', name: '俄罗斯风情街', query: '大连俄罗斯风情街', time: '15:35', kind: 'sight', label: 'City Walk · 俄罗斯风情街', info: '从日料店打车或步行接入，轻松看建筑、拍照即可；地图会直接显示景点名称。' },
+        { id: 'aoshen', name: '澳深鱼市·祝庆街店', query: '澳深鱼市 祝庆街店 大连', time: '14:10', kind: 'food', label: '午饭 · 澳深鱼市', budget: '人均约 ¥127', info: '按你确认的鱼市午饭安排；高德门店为竹青街 2-3 号，孩子以熟食、白饭为主。', fallback: '排队超 30 分钟改久時。' },
+        { id: 'russian', name: '俄罗斯风情街', query: '大连俄罗斯风情街', time: '15:35', kind: 'sight', label: 'City Walk · 俄罗斯风情街', info: '按你确认坐标展示；轻松看建筑、拍照即可。' },
         { id: 'dive', name: 'DIVE COFFEE扎猛咖啡馆', query: 'Dive Coffee 大连', time: '16:10', kind: 'coffee', label: '咖啡 · Dive Coffee', info: '俄风街向南步行约 15 分钟；作为中山 City Walk 的中途休息。' },
         { id: 'dalianmall', name: '大连商场', query: '大连商场', time: '16:45', kind: 'shopping', label: 'City Walk · 大连商场', info: '青三街 1 号；看老商场与青泥洼桥街区，顺便补给。' },
         { id: 'zhongshan', name: '中山广场', query: '中山广场 大连', time: '17:20', kind: 'sight', label: 'City Walk · 中山广场', info: '从大连商场步行至中山广场，慢走看近代建筑与放射状街道。' },
@@ -17,6 +17,7 @@ window.DALIAN_TRIP = {
         { id: 'boardwalk', name: '东港木栈道', query: '东港木栈道 大连', time: '21:20', kind: 'sight', label: '夜景 · 东港木栈道', info: '水城后沿东港散步；饭后有精神再走，成人夜宵与它二选一。' }
       ],
       candidates: [
+        { name: '杉木日本料理·港湾广场店', query: '杉木日本料理 港湾广场 大连', kind: 'food', reason: '想吃日料时替换澳深午饭' },
         { name: '久時·生鱼饭·咖喱', query: '久時 生鱼饭 咖喱 大连', kind: 'food', reason: '澳深排队时的午饭替换' },
         { name: '喜鼎海胆水饺·东港店', query: '喜鼎海胆水饺 东港店 大连', kind: 'food', reason: '孩子可吃水饺；建议先取号' },
         { name: '桃源市场', query: '桃源市场 大连', kind: 'market', reason: '只在决定民宿做一顿饭时补水果、酸奶、食材' },

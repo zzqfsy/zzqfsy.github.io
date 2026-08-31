@@ -1,7 +1,7 @@
 (() => {
   const data = window.DALIAN_TRIP;
   const config = window.TRIP_MAP_CONFIG || {};
-  const cacheKey = 'dalian-trip-map-v6';
+  const cacheKey = 'dalian-trip-map-v7';
   const cacheLifetime = 1000 * 60 * 60 * 24 * 14;
   const dayIds = Object.keys(data.days);
   const dayColor = Object.fromEntries(Object.entries(data.days).map(([id, value]) => [id, value.color]));
@@ -11,7 +11,7 @@
   const cached = readCache();
   const state = {
     day: requested === 'all' || data.days[requested] ? requested : 'd1', mode: 'plan', map: null, placeSearch: null,
-    poi: new Map(Object.entries(cached.pois || {})), routes: new Map([...Object.entries(window.DALIAN_STATIC_ROUTES || {}), ...Object.entries(cached.routes || {})]), poiPromises: new Map(), routePromises: new Map(),
+    poi: new Map(Object.entries(cached.pois || {})), routes: new Map([...Object.entries(cached.routes || {}), ...Object.entries(window.DALIAN_STATIC_ROUTES || {})]), poiPromises: new Map(), routePromises: new Map(),
     markerList: [], routeLines: [], selected: null, poiDone: 0, poiFound: 0, poiTotal: 0, routeDone: 0, routeFound: 0, routeTotal: 0, poiErrors: []
   };
   const $ = selector => document.querySelector(selector);
@@ -104,8 +104,8 @@
     let cursor = 0; const workers = Array.from({ length: Math.min(limit, items.length) }, async () => { while (cursor < items.length) { const item = items[cursor++]; await task(item); } }); await Promise.all(workers);
   }
   async function preloadPois() {
-    const unique = [...new Map(allItems().map(item => [item.poiKey, item])).values()]; state.poiTotal = unique.length; state.poiDone = unique.filter(item => state.poi.has(item.poiKey)).length; state.poiFound = state.poiDone; updateStatus();
-    await runPool(unique.filter(item => !state.poi.has(item.poiKey)), 3, async item => { const poi = await resolvePoi(item); state.poiDone += 1; if (poi) state.poiFound += 1; updateStatus(); renderSheet(); renderMap(); });
+    const unique = [...new Map(allItems().map(item => [item.poiKey, item])).values()]; const hasStatic = item => !!placeToCache(window.DALIAN_STATIC_POIS?.[item.query]); const pending = unique.filter(item => hasStatic(item) || !state.poi.has(item.poiKey)); state.poiTotal = unique.length; state.poiDone = unique.length - pending.length; state.poiFound = state.poiDone; updateStatus();
+    await runPool(pending, 3, async item => { const poi = await resolvePoi(item); state.poiDone += 1; if (poi) state.poiFound += 1; updateStatus(); renderSheet(); renderMap(); });
     if (!state.poiFound) error(`没有取得任何高德 POI。接口返回：${state.poiErrors.join('；') || '请求超时'}。`);
   }
   function routeKey(day, index) { return `${day}-${index}`; }
