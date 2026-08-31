@@ -1,7 +1,7 @@
 (() => {
   const data = window.DALIAN_TRIP;
   const config = window.TRIP_MAP_CONFIG || {};
-  const cacheKey = 'dalian-trip-map-v7';
+  const cacheKey = 'dalian-trip-map-v8';
   const cacheLifetime = 1000 * 60 * 60 * 24 * 14;
   const dayIds = Object.keys(data.days);
   const dayColor = Object.fromEntries(Object.entries(data.days).map(([id, value]) => [id, value.color]));
