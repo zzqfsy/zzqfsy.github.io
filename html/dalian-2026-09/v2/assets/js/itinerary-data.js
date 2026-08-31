@@ -3,18 +3,18 @@ window.DALIAN_TRIP = {
   origin: { id: 'stay', name: '东港绿地中心民宿', query: '大连东港绿地中心', type: 'stay', note: '民宿位于东港绿地中心；出发前如拿到具体楼栋/门牌，可在高德中再核对一次。' },
   days: {
     d1: {
-      label: 'Day 1', title: '中山 City Walk · 东港夜景', color: '#ee624e',
+      label: 'Day 1', title: '中山日料 · 咖啡商超 · 东港夜景', color: '#ee624e',
       stops: [
         { id: 'stay-in', ref: 'stay', time: '13:10', label: '东港绿地中心民宿 · 放行李', kind: 'stay', info: '机场到东港约 45–60 分钟，先放行李再进中山。' },
-        { id: 'aoshen', name: '澳深鱼市·祝庆街店', query: '澳深鱼市 祝庆街店 大连', time: '14:10', kind: 'food', label: '午饭 · 澳深鱼市', budget: '人均约 ¥127', info: '经典海鲜饭 ¥228 或三文鱼畅享海鲜饭 ¥88；孩子以熟食、白饭为主。', fallback: '排队超 30 分钟改久時。' },
-        { id: 'russian', name: '大连·俄罗斯风情街', query: '大连俄罗斯风情街', time: '15:25', kind: 'sight', label: 'City Walk · 俄罗斯风情街', info: '从祝庆街步行过去约 10–15 分钟；看建筑、轻松拍照即可，不必久逛。' },
-        { id: 'dive', name: 'DIVE COFFEE扎猛咖啡馆', query: 'Dive Coffee 大连', time: '16:00', kind: 'coffee', label: '咖啡 · Dive Coffee', info: '俄风街向南步行约 15 分钟就到，作为中途坐下休息；与东北灵丹二选一。' },
-        { id: 'dalianmall', name: '大连商场', query: '大连商场', time: '16:35', kind: 'shopping', label: 'City Walk · 大连商场', info: '从 Dive 步行约 10 分钟；看老商场与青泥洼桥街区，带娃累了可进店吹空调、补给。' },
-        { id: 'zhongshan', name: '中山广场', query: '中山广场 大连', time: '17:05', kind: 'sight', label: 'City Walk · 中山广场', info: '从大连商场步行至中山广场，慢走看近代建筑与放射状街道。' },
-        { id: 'stay-back', ref: 'stay', time: '17:35', label: '回绿地中心民宿 · 缓冲', kind: 'stay', info: '打车回民宿休息、换衣服；如计划民宿做一顿饭，再顺路买菜。' },
-        { id: 'zhenghuangqi', name: '正黄旗海鲜烧烤·东港店', query: '正黄旗海鲜烧烤 东港店 大连', time: '18:45', kind: 'food', label: '晚饭 · 正黄旗', budget: '人均约 ¥160', info: '海肠捞饭或海胆二选一，加烤贝类和熟食；别与午饭重复刺身。' },
-        { id: 'watercity', name: '东方水城运河', query: '东方水城 大连', time: '20:20', kind: 'sight', label: '夜景 · 东方水城', info: '晚饭后再来散步、拍照；20:00 后灯光氛围更好。' },
-        { id: 'boardwalk', name: '东港木栈道', query: '东港木栈道 大连', time: '21:10', kind: 'sight', label: '夜景 · 东港木栈道', info: '水城后沿东港散步；饭后有精神再走，成人夜宵与它二选一。' }
+        { id: 'sugiki', name: 'SUGIKI·杉木日本料理', query: '杉木日本料理 港湾广场 大连', time: '14:10', kind: 'food', label: '午饭 · 杉木日料', budget: '人均约 ¥250–350', info: '放行李后直接吃日料；刺身与热食搭配，带娃优先点熟食和米饭。', fallback: '临时没位可改澳深鱼市或久時。' },
+        { id: 'russian', name: '俄罗斯风情街', query: '大连俄罗斯风情街', time: '15:35', kind: 'sight', label: 'City Walk · 俄罗斯风情街', info: '从日料店打车或步行接入，轻松看建筑、拍照即可；地图会直接显示景点名称。' },
+        { id: 'dive', name: 'DIVE COFFEE扎猛咖啡馆', query: 'Dive Coffee 大连', time: '16:10', kind: 'coffee', label: '咖啡 · Dive Coffee', info: '俄风街向南步行约 15 分钟；作为中山 City Walk 的中途休息。' },
+        { id: 'dalianmall', name: '大连商场', query: '大连商场', time: '16:45', kind: 'shopping', label: 'City Walk · 大连商场', info: '青三街 1 号；看老商场与青泥洼桥街区，顺便补给。' },
+        { id: 'zhongshan', name: '中山广场', query: '中山广场 大连', time: '17:20', kind: 'sight', label: 'City Walk · 中山广场', info: '从大连商场步行至中山广场，慢走看近代建筑与放射状街道。' },
+        { id: 'stay-back', ref: 'stay', time: '18:00', label: '回绿地中心民宿 · 缓冲', kind: 'stay', info: '打车回民宿休息、换衣服；如计划民宿做一顿饭，再顺路买菜。' },
+        { id: 'zhenghuangqi', name: '正黄旗海鲜烧烤·东港店', query: '正黄旗海鲜烧烤 东港店 大连', time: '19:00', kind: 'food', label: '晚饭 · 正黄旗', budget: '人均约 ¥160', info: '海肠捞饭或海胆二选一，加烤贝类和熟食；别与午饭重复刺身。' },
+        { id: 'watercity', name: '东方水城运河', query: '东方水城 大连', time: '20:30', kind: 'sight', label: '夜景 · 东方水城', info: '晚饭后再来散步、拍照；20:00 后灯光氛围更好。' },
+        { id: 'boardwalk', name: '东港木栈道', query: '东港木栈道 大连', time: '21:20', kind: 'sight', label: '夜景 · 东港木栈道', info: '水城后沿东港散步；饭后有精神再走，成人夜宵与它二选一。' }
       ],
       candidates: [
         { name: '久時·生鱼饭·咖喱', query: '久時 生鱼饭 咖喱 大连', kind: 'food', reason: '澳深排队时的午饭替换' },
@@ -25,12 +25,14 @@ window.DALIAN_TRIP = {
       ]
     },
     d2: {
-      label: 'Day 2', title: '莲花山 · 星海广场', color: '#1976d2',
+      label: 'Day 2', title: '动物园索道 · 自然博物馆 · 星海喂海鸥', color: '#1976d2',
       stops: [
-        { id: 'stay-start', ref: 'stay', time: '09:00', label: '东港出发', kind: 'stay', info: '打车前往莲花山，保留带娃缓冲。' },
-        { id: 'lotus', name: '莲花山观景台', query: '莲花山观景台 大连', time: '09:30', kind: 'sight', label: '莲花山 · 索道/观景', info: '天气好看海拍照；风大或下雨缩短并改室内。' },
-        { id: 'riyuesheng', name: '日月昇·星海公园店', query: '日月昇 星海公园店 大连', time: '12:00', kind: 'food', label: '午饭 · 日月昇', budget: '人均约 ¥97', info: '海肠捞饭或海胆相关菜只选一项，配焖子/蔬菜。' },
-        { id: 'xinghai', name: '星海广场', query: '星海广场 大连', time: '13:30', kind: 'sight', label: '星海广场 · 看海休息', info: '看海、玩沙、遛娃；下午不再塞森林动物园。' },
+        { id: 'stay-start', ref: 'stay', time: '08:45', label: '东港出发', kind: 'stay', info: '打车到森林动物园南侧，上午留足索道排队与带娃缓冲。' },
+        { id: 'deer', name: '森林动物园·梅花鹿', query: '大连森林动物园梅花鹿', time: '09:30', kind: 'sight', label: '动物园 · 遇见梅花鹿', info: '从南侧进山，先慢走找梅花鹿；只喂景区允许的食物，孩子靠近时由成人看护。' },
+        { id: 'cableway', name: '大连海达索道', query: '大连森林动物园海达索道', time: '10:15', kind: 'sight', label: '动物园 · 海达索道', info: '看海与跨海大桥；大风、暴雨或雷电可能临停，现场确认后再购票。' },
+        { id: 'riyuesheng', name: '日月昇·星海公园店', query: '日月昇 星海公园店 大连', time: '12:30', kind: 'food', label: '午饭 · 日月昇', budget: '人均约 ¥97', info: '海肠捞饭或海胆相关菜只选一项，配焖子/蔬菜。' },
+        { id: 'natural', name: '大连自然博物馆', query: '大连自然博物馆', time: '14:00', kind: 'sight', label: '自然博物馆', info: '只看恐龙、鲸类、海洋动物三部分；16:00 左右离馆，别塞太满。' },
+        { id: 'xinghai', name: '星海广场', query: '星海广场 大连', time: '16:20', kind: 'sight', label: '星海广场 · 喂海鸥', info: '以当日海鸥情况为准；看海、玩沙、遛娃，注意防风与海边安全。' },
         { id: 'yingmu', name: '樱木千鹤·星海店', query: '樱木千鹤 星海店 大连', time: '18:30', kind: 'food', label: '晚饭 · 樱木千鹤', budget: '人均约 ¥327', info: '海胆饭 ¥299 或海鲜饭 ¥199 二选一；提前订位。' }
       ],
       candidates: [
@@ -41,15 +43,13 @@ window.DALIAN_TRIP = {
       ]
     },
     d3: {
-      label: 'Day 3', title: '自然博物馆 · 中山收尾', color: '#8557c8',
+      label: 'Day 3', title: '自由活动 · 退房收尾', color: '#8557c8',
       stops: [
-        { id: 'stay-checkout', ref: 'stay', time: '08:20', label: '退房 / 寄行李后出发', kind: 'stay', info: '务必先确认民宿寄存与返程时间。' },
-        { id: 'natural', name: '大连自然博物馆', query: '大连自然博物馆', time: '09:00', kind: 'sight', label: '自然博物馆', info: '只看恐龙、鲸类、海洋动物三部分；10:25 左右离馆。' },
-        { id: 'pinhailou', name: '品海楼', query: '品海楼 大连', time: '11:15', kind: 'food', label: '午饭 · 品海楼', budget: '海肠捞饭 ¥128；海胆豆腐 ¥79', info: '赶时间改添福来；这餐不再加生鱼饭。' }
+        { id: 'stay-checkout', ref: 'stay', time: '09:00', label: '自由活动 / 退房收尾', kind: 'stay', info: '睡到自然醒，按民宿退房、带娃状态与返程时间灵活安排；今天不绑定固定点位和路线。' }
       ],
       candidates: [
-        { name: '阿水的生鱼饭旗舰店', query: '阿水的生鱼饭旗舰店 大连', kind: 'food', reason: '仅大人特别想再吃生鱼饭时选择' },
-        { name: '添福来饺子馆', query: '添福来饺子馆 大连', kind: 'food', reason: '赶时间、孩子想吃熟饺子时替换' }
+        { name: '凯丹广场', query: '凯丹广场 大连', kind: 'market', reason: '下雨或带娃需要室内短停时再去' },
+        { name: '阿水的生鱼饭旗舰店', query: '阿水的生鱼饭旗舰店 大连', kind: 'food', reason: '仅大人特别想再吃生鱼饭时选择' }
       ]
     }
   }
